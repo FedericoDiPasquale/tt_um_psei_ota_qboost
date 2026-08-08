@@ -37,9 +37,9 @@ Main VDD is used (1.8V).
 
 ## How to test
 
-Drive ui[0], ui[1], ui[2] with a 3-bit code sequence that approximates a sine wave when passed through the DAC — e.g. step through codes 0→7→0 at a fixed sample rate to trace out one period, repeating to build up multiple cycles. A microcontroller, FPGA, or a simple counter/LUT can generate this pattern.
+Drive ui[0], ui[1], ui[2] with a 3-bit code sequence that approximates a sine wave when passed through the DAC at a fixed sample rate to trace out one period, repeating to build up multiple cycles.
 
-Probe ua[0] with an oscilloscope (or the Tiny Tapeout Analog Discovery setup).
+Probe ua[0] with an oscilloscope.
 You should see a smooth, continuous waveform tracking the average shape of the input staircase, with the sharp steps filtered out. Increasing/decreasing the code update rate relative to the filter's resonant frequency changes how much smoothing you observe.
 
 Leaving the code static lets you check the DC operating point and confirm the DAC + attenuator sit inside the filter's linear input range (~0.89375V ± 0.1V at the filter input).
