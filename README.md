@@ -28,7 +28,9 @@ Puoi usare ASCII art o un'immagine (preferibile) caricata in docs/.]
 
 3) Post-layout (PEX): parasitic-extracted netlist available; post-layout vs. pre-layout comparison.
 
-(images available in folder docs).
+![Stationary Time Response](docs/main_trans_stationary.png)
+![Transient Damped Time Response](docs/main_trans_damp_response.png)
+![Frequency Response (Amplitude and Phase)](docs/ac_mag_phase_response.png)
 
 ## How it works
 
