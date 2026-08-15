@@ -1,0 +1,71 @@
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/main.sch
+.subckt main VDD GND b0 b1 b2 out
+*.PININFO VDD:I GND:I b0:I b1:I b2:I out:O
+x5 b0 b1 b2 VDD v_dac GND DAC3bit
+x1 VDD v_dac out GND otaSys_5t_sky130
+.ends
+
+* expanding   symbol:  DAC3bit.sym # of pins=6
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/DAC3bit.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/DAC3bit.sch
+.subckt DAC3bit b0 b1 b2 VDD out GND
+*.PININFO out:O b0:I b1:I b2:I GND:I VDD:I
+XR1 GND net3 sky130_fd_pr__res_generic_po W=1 L=21
+XR2 net3 net1 sky130_fd_pr__res_generic_po W=1 L=21
+XR3 b0 net4 sky130_fd_pr__res_generic_po W=1 L=21
+XR4 net4 net1 sky130_fd_pr__res_generic_po W=1 L=21
+XR5 b1 net5 sky130_fd_pr__res_generic_po W=1 L=21
+XR6 net5 net2 sky130_fd_pr__res_generic_po W=1 L=21
+XR7 b2 net6 sky130_fd_pr__res_generic_po W=1 L=21
+XR8 net6 vx sky130_fd_pr__res_generic_po W=1 L=21
+XR9 net1 net2 sky130_fd_pr__res_generic_po W=1 L=21
+XR10 net2 vx sky130_fd_pr__res_generic_po W=1 L=21
+XR12 VDD out sky130_fd_pr__res_generic_po W=1 L=21
+XR13 out GND sky130_fd_pr__res_generic_po W=1 L=21
+XR11 out vx sky130_fd_pr__res_generic_po W=1 L=63
+.ends
+
+
+* expanding   symbol:  otaSys_5t_sky130.sym # of pins=4
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaSys_5t_sky130.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaSys_5t_sky130.sch
+.subckt otaSys_5t_sky130 VDD in out GND
+*.PININFO out:O in:I GND:I VDD:I
+x1 VDD net1 net2 in GND ota_5t_sky130
+x2 VDD out net1 net2 GND ota_5t_sky130
+x3 VDD net1 net2 out GND ota_5t_sky130
+x4 VDD out out net2 GND otaq_5t_sky130
+XC1 net1 GND sky130_fd_pr__cap_mim_m3_1 W=30 L=30 m=4
+XC2 out GND sky130_fd_pr__cap_mim_m3_1 W=30 L=30 m=4
+XR1 VDD net2 GND sky130_fd_pr__res_high_po_1p41 L=88.83 mult=1
+XR2 net2 GND GND sky130_fd_pr__res_high_po_1p41 L=88.83 mult=1
+.ends
+
+
+* expanding   symbol:  ota_5t_sky130.sym # of pins=5
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/ota_5t_sky130.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/ota_5t_sky130.sch
+.subckt ota_5t_sky130 VDD VOUT VINP VINN GND
+*.PININFO VINP:I VINN:I VOUT:O VDD:I GND:I
+XM5 V5 VDD GND GND sky130_fd_pr__nfet_01v8 L=1.475 W=4 nf=1
+XM1 net1 VINP V5 GND sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1
+XM2 VOUT VINN V5 GND sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=5 nf=1
+XM4 VOUT net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=5 nf=1
+XM6 VDD VDD GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1
+.ends
+
+
+* expanding   symbol:  otaq_5t_sky130.sym # of pins=5
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaq_5t_sky130.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaq_5t_sky130.sch
+.subckt otaq_5t_sky130 VDD VOUT VINP VINN GND
+*.PININFO VINP:I VINN:I VOUT:O VDD:I GND:I
+XM5 net2 VDD GND GND sky130_fd_pr__nfet_01v8 L=20 W=0.5 nf=1
+XM1 net1 VINP net2 GND sky130_fd_pr__nfet_01v8 L=7 W=0.5 nf=1
+XM2 VOUT VINN net2 GND sky130_fd_pr__nfet_01v8 L=7 W=0.5 nf=1
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=7 W=1 nf=1
+XM4 VOUT net1 VDD VDD sky130_fd_pr__pfet_01v8 L=7 W=1 nf=1
+XM6 VDD VDD GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1
+.ends
+
