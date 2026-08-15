@@ -11,7 +11,7 @@ Puoi usare ASCII art o un'immagine (preferibile) caricata in docs/.]
 
 ## Implementation
 
-1) PDK: SkyWater SKY130A (sky130_fd_pr primitive devices: nfet_01v8, pfet_01v8, res_generic_po, res_xhigh_po, cap_mim_m3_1).
+1) PDK: SkyWater SKY130A (sky130_fd_pr primitive devices: nfet_01v8, pfet_01v8, res_generic_po, res_high_po, cap_mim_m3_1).
 2) Schematic capture and  simulation: xschem + ngspice.
 3) Layout: Magic VLSI layout tool, using the Sky130 device generators (gencells) for all primitive devices (transistors, poly/xhigh-poly resistors, MiM capacitors) to guarantee DRC-correct geometry.
 4) Verification: DRC and LVS (layout vs. schematic) in Magic/netgen all blocks pass LVS. Parasitic extraction (PEX) performed for post-layout re-simulation in ngspice.
