@@ -29,7 +29,9 @@ Puoi usare ASCII art o un'immagine (preferibile) caricata in docs/.]
 3) Post-layout (PEX): parasitic-extracted netlist available; post-layout vs. pre-layout comparison.
 
 ![Stationary Time Response](docs/main_trans_stationary.png)
+Where OUT is the system's time response from the schematic while on the other hand OUTLAY is the system's time response from post-layout. Finally, x1.v_dac is the output of the DAC3bit.
 ![Transient Damped Time Response](docs/main_trans_damp_response.png)
+Where OUT is the system's time response from the schematic while on the other hand OUTLAY is the system's time response from post-layout. Finally, x1.v_dac is the output of the DAC3bit.
 ![Frequency Response (Amplitude and Phase)](docs/ac_mag_phase_response.png)
 
 ## How it works
