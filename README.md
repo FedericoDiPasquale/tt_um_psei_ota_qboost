@@ -6,8 +6,7 @@ This project implements a second-order regenerative OTA-C filter that smooths th
 
 ## Architecture
 
-[Schema a blocchi + descrizione dei blocchi principali.
-Puoi usare ASCII art o un'immagine (preferibile) caricata in docs/.]
+![Architecture's block diagram](docs/main_trans_stationary.png)
 
 ## Implementation
 
