@@ -45,6 +45,9 @@ module tt_um_psei_ota_qboost (
     assign uo_out  = 8'b0;
     assign uio_out = 8'b0;
     assign uio_oe  = 8'b0;
+    assign b0 = ui_in[0];
+    assign b1 = ui_in[1];
+    assign b2 = ui_in[2];
 
     // Pin analogici
     assign ua[5] = out;
