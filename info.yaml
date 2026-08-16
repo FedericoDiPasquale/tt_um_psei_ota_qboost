@@ -60,8 +60,7 @@ pinout:
   ua[2]: ""
   ua[3]: ""
   ua[4]: ""
-  ua[5]: ""
-  ua[6]: "Vout - filtered analog output"
-  ua[7]: ""
+  ua[5]: "Vout - filtered analog output"
+
 # Do not change!
 yaml_version: 6
