@@ -1,9 +1,9 @@
 Title: ** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/main_tb_postlayout.sch
-Date: Sat Aug 15 17:55:20  2026
+Date: Sun Aug 16 17:18:14  2026
 Command: ngspice-45.2, Build Mon Feb 16 14:08:33 UTC 2026
 Plotname: Operating Point
 Flags: real
-No. Variables: 795
+No. Variables: 800
 No. Points: 1
 Variables:
 	0	v(b0)	voltage
@@ -84,75 +84,75 @@ Variables:
 	75	v(m.x1.x1.x4.xm6.msky130_fd_pr__nfet_01v8#body)	voltage
 	76	v(m.x1.x1.x4.xm6.msky130_fd_pr__nfet_01v8#dbody)	voltage
 	77	v(m.x1.x1.x4.xm6.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	78	v(m.x2.x1.msky130_fd_pr__nfet_01v8#body)	voltage
-	79	v(m.x2.x1.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	80	v(m.x2.x1.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	81	v(m.x2.x5.msky130_fd_pr__pfet_01v8#body)	voltage
-	82	v(m.x2.x5.msky130_fd_pr__pfet_01v8#dbody)	voltage
-	83	v(m.x2.x5.msky130_fd_pr__pfet_01v8#sbody)	voltage
-	84	v(m.x2.x6.msky130_fd_pr__pfet_01v8#body)	voltage
-	85	v(m.x2.x6.msky130_fd_pr__pfet_01v8#dbody)	voltage
-	86	v(m.x2.x6.msky130_fd_pr__pfet_01v8#sbody)	voltage
-	87	v(m.x2.x7.msky130_fd_pr__pfet_01v8#body)	voltage
-	88	v(m.x2.x7.msky130_fd_pr__pfet_01v8#dbody)	voltage
-	89	v(m.x2.x7.msky130_fd_pr__pfet_01v8#sbody)	voltage
-	90	v(m.x2.x8.msky130_fd_pr__pfet_01v8#body)	voltage
-	91	v(m.x2.x8.msky130_fd_pr__pfet_01v8#dbody)	voltage
-	92	v(m.x2.x8.msky130_fd_pr__pfet_01v8#sbody)	voltage
-	93	v(m.x2.x12.msky130_fd_pr__nfet_01v8#body)	voltage
-	94	v(m.x2.x12.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	95	v(m.x2.x12.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	96	v(m.x2.x13.msky130_fd_pr__nfet_01v8#body)	voltage
-	97	v(m.x2.x13.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	98	v(m.x2.x13.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	99	v(m.x2.x14.msky130_fd_pr__nfet_01v8#body)	voltage
-	100	v(m.x2.x14.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	101	v(m.x2.x14.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	78	v(m.x2.x2.msky130_fd_pr__pfet_01v8#body)	voltage
+	79	v(m.x2.x2.msky130_fd_pr__pfet_01v8#dbody)	voltage
+	80	v(m.x2.x2.msky130_fd_pr__pfet_01v8#sbody)	voltage
+	81	v(m.x2.x3.msky130_fd_pr__nfet_01v8#body)	voltage
+	82	v(m.x2.x3.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	83	v(m.x2.x3.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	84	v(m.x2.x5.msky130_fd_pr__nfet_01v8#body)	voltage
+	85	v(m.x2.x5.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	86	v(m.x2.x5.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	87	v(m.x2.x6.msky130_fd_pr__nfet_01v8#body)	voltage
+	88	v(m.x2.x6.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	89	v(m.x2.x6.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	90	v(m.x2.x7.msky130_fd_pr__nfet_01v8#body)	voltage
+	91	v(m.x2.x7.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	92	v(m.x2.x7.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	93	v(m.x2.x10.msky130_fd_pr__nfet_01v8#body)	voltage
+	94	v(m.x2.x10.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	95	v(m.x2.x10.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	96	v(m.x2.x12.msky130_fd_pr__nfet_01v8#body)	voltage
+	97	v(m.x2.x12.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	98	v(m.x2.x12.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	99	v(m.x2.x13.msky130_fd_pr__nfet_01v8#body)	voltage
+	100	v(m.x2.x13.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	101	v(m.x2.x13.msky130_fd_pr__nfet_01v8#sbody)	voltage
 	102	v(m.x2.x15.msky130_fd_pr__nfet_01v8#body)	voltage
 	103	v(m.x2.x15.msky130_fd_pr__nfet_01v8#dbody)	voltage
 	104	v(m.x2.x15.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	105	v(m.x2.x21.msky130_fd_pr__nfet_01v8#body)	voltage
-	106	v(m.x2.x21.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	107	v(m.x2.x21.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	108	v(m.x2.x24.msky130_fd_pr__pfet_01v8#body)	voltage
-	109	v(m.x2.x24.msky130_fd_pr__pfet_01v8#dbody)	voltage
-	110	v(m.x2.x24.msky130_fd_pr__pfet_01v8#sbody)	voltage
-	111	v(m.x2.x25.msky130_fd_pr__pfet_01v8#body)	voltage
-	112	v(m.x2.x25.msky130_fd_pr__pfet_01v8#dbody)	voltage
-	113	v(m.x2.x25.msky130_fd_pr__pfet_01v8#sbody)	voltage
-	114	v(m.x2.x27.msky130_fd_pr__nfet_01v8#body)	voltage
-	115	v(m.x2.x27.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	116	v(m.x2.x27.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	117	v(m.x2.x28.msky130_fd_pr__nfet_01v8#body)	voltage
-	118	v(m.x2.x28.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	119	v(m.x2.x28.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	120	v(m.x2.x30.msky130_fd_pr__nfet_01v8#body)	voltage
-	121	v(m.x2.x30.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	122	v(m.x2.x30.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	123	v(m.x2.x33.msky130_fd_pr__nfet_01v8#body)	voltage
-	124	v(m.x2.x33.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	125	v(m.x2.x33.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	126	v(m.x2.x34.msky130_fd_pr__nfet_01v8#body)	voltage
-	127	v(m.x2.x34.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	128	v(m.x2.x34.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	129	v(m.x2.x35.msky130_fd_pr__pfet_01v8#body)	voltage
-	130	v(m.x2.x35.msky130_fd_pr__pfet_01v8#dbody)	voltage
-	131	v(m.x2.x35.msky130_fd_pr__pfet_01v8#sbody)	voltage
-	132	v(m.x2.x37.msky130_fd_pr__pfet_01v8#body)	voltage
-	133	v(m.x2.x37.msky130_fd_pr__pfet_01v8#dbody)	voltage
-	134	v(m.x2.x37.msky130_fd_pr__pfet_01v8#sbody)	voltage
-	135	v(m.x2.x38.msky130_fd_pr__nfet_01v8#body)	voltage
-	136	v(m.x2.x38.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	137	v(m.x2.x38.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	138	v(m.x2.x40.msky130_fd_pr__nfet_01v8#body)	voltage
-	139	v(m.x2.x40.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	140	v(m.x2.x40.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	141	v(m.x2.x43.msky130_fd_pr__nfet_01v8#body)	voltage
-	142	v(m.x2.x43.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	143	v(m.x2.x43.msky130_fd_pr__nfet_01v8#sbody)	voltage
-	144	v(m.x2.x45.msky130_fd_pr__nfet_01v8#body)	voltage
-	145	v(m.x2.x45.msky130_fd_pr__nfet_01v8#dbody)	voltage
-	146	v(m.x2.x45.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	105	v(m.x2.x16.msky130_fd_pr__nfet_01v8#body)	voltage
+	106	v(m.x2.x16.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	107	v(m.x2.x16.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	108	v(m.x2.x17.msky130_fd_pr__pfet_01v8#body)	voltage
+	109	v(m.x2.x17.msky130_fd_pr__pfet_01v8#dbody)	voltage
+	110	v(m.x2.x17.msky130_fd_pr__pfet_01v8#sbody)	voltage
+	111	v(m.x2.x18.msky130_fd_pr__pfet_01v8#body)	voltage
+	112	v(m.x2.x18.msky130_fd_pr__pfet_01v8#dbody)	voltage
+	113	v(m.x2.x18.msky130_fd_pr__pfet_01v8#sbody)	voltage
+	114	v(m.x2.x20.msky130_fd_pr__pfet_01v8#body)	voltage
+	115	v(m.x2.x20.msky130_fd_pr__pfet_01v8#dbody)	voltage
+	116	v(m.x2.x20.msky130_fd_pr__pfet_01v8#sbody)	voltage
+	117	v(m.x2.x22.msky130_fd_pr__nfet_01v8#body)	voltage
+	118	v(m.x2.x22.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	119	v(m.x2.x22.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	120	v(m.x2.x25.msky130_fd_pr__nfet_01v8#body)	voltage
+	121	v(m.x2.x25.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	122	v(m.x2.x25.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	123	v(m.x2.x26.msky130_fd_pr__pfet_01v8#body)	voltage
+	124	v(m.x2.x26.msky130_fd_pr__pfet_01v8#dbody)	voltage
+	125	v(m.x2.x26.msky130_fd_pr__pfet_01v8#sbody)	voltage
+	126	v(m.x2.x28.msky130_fd_pr__nfet_01v8#body)	voltage
+	127	v(m.x2.x28.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	128	v(m.x2.x28.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	129	v(m.x2.x29.msky130_fd_pr__nfet_01v8#body)	voltage
+	130	v(m.x2.x29.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	131	v(m.x2.x29.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	132	v(m.x2.x33.msky130_fd_pr__nfet_01v8#body)	voltage
+	133	v(m.x2.x33.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	134	v(m.x2.x33.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	135	v(m.x2.x36.msky130_fd_pr__nfet_01v8#body)	voltage
+	136	v(m.x2.x36.msky130_fd_pr__nfet_01v8#dbody)	voltage
+	137	v(m.x2.x36.msky130_fd_pr__nfet_01v8#sbody)	voltage
+	138	v(m.x2.x42.msky130_fd_pr__pfet_01v8#body)	voltage
+	139	v(m.x2.x42.msky130_fd_pr__pfet_01v8#dbody)	voltage
+	140	v(m.x2.x42.msky130_fd_pr__pfet_01v8#sbody)	voltage
+	141	v(m.x2.x43.msky130_fd_pr__pfet_01v8#body)	voltage
+	142	v(m.x2.x43.msky130_fd_pr__pfet_01v8#dbody)	voltage
+	143	v(m.x2.x43.msky130_fd_pr__pfet_01v8#sbody)	voltage
+	144	v(m.x2.x44.msky130_fd_pr__pfet_01v8#body)	voltage
+	145	v(m.x2.x44.msky130_fd_pr__pfet_01v8#dbody)	voltage
+	146	v(m.x2.x44.msky130_fd_pr__pfet_01v8#sbody)	voltage
 	147	v(m.x2.x46.msky130_fd_pr__nfet_01v8#body)	voltage
 	148	v(m.x2.x46.msky130_fd_pr__nfet_01v8#dbody)	voltage
 	149	v(m.x2.x46.msky130_fd_pr__nfet_01v8#sbody)	voltage
@@ -581,234 +581,245 @@ Variables:
 	572	v(x2.gnd.n395)	voltage
 	573	v(x2.gnd.n396)	voltage
 	574	v(x2.gnd.n397)	voltage
-	575	v(x2.gnd.t0)	voltage
-	576	v(x2.gnd.t1)	voltage
-	577	v(x2.gnd.t2)	voltage
-	578	v(x2.gnd.t3)	voltage
-	579	v(x2.gnd.t4)	voltage
-	580	v(x2.gnd.t5)	voltage
-	581	v(x2.gnd.t6)	voltage
-	582	v(x2.gnd.t7)	voltage
-	583	v(x2.gnd.t8)	voltage
-	584	v(x2.gnd.t9)	voltage
-	585	v(x2.gnd.t10)	voltage
-	586	v(x2.gnd.t11)	voltage
-	587	v(x2.gnd.t12)	voltage
-	588	v(x2.gnd.t13)	voltage
-	589	v(x2.gnd.t14)	voltage
-	590	v(x2.gnd.t15)	voltage
-	591	v(x2.gnd.t16)	voltage
-	592	v(x2.gnd.t17)	voltage
-	593	v(x2.gnd.t18)	voltage
-	594	v(x2.gnd.t19)	voltage
-	595	v(x2.gnd.t20)	voltage
-	596	v(x2.gnd.t21)	voltage
-	597	v(x2.gnd.t22)	voltage
-	598	v(x2.gnd.t23)	voltage
-	599	v(x2.gnd.t24)	voltage
-	600	v(x2.gnd.t25)	voltage
-	601	v(x2.gnd.t26)	voltage
-	602	v(x2.gnd.t27)	voltage
-	603	v(x2.gnd.t28)	voltage
-	604	v(x2.gnd.t29)	voltage
-	605	v(x2.gnd.t30)	voltage
-	606	v(x2.gnd.t31)	voltage
-	607	v(x2.gnd.t32)	voltage
-	608	v(x2.gnd.t33)	voltage
-	609	v(x2.gnd.t34)	voltage
-	610	v(x2.gnd.t35)	voltage
-	611	v(x2.gnd.t36)	voltage
-	612	v(x2.out.n0)	voltage
-	613	v(x2.out.n1)	voltage
-	614	v(x2.out.n2)	voltage
-	615	v(x2.out.n3)	voltage
-	616	v(x2.out.n4)	voltage
-	617	v(x2.out.n5)	voltage
-	618	v(x2.out.n6)	voltage
-	619	v(x2.out.n7)	voltage
-	620	v(x2.out.t0)	voltage
-	621	v(x2.out.t1)	voltage
-	622	v(x2.out.t2)	voltage
-	623	v(x2.out.t3)	voltage
-	624	v(x2.out.t4)	voltage
-	625	v(x2.out.t5)	voltage
-	626	v(x2.out.t6)	voltage
-	627	v(x2.out.t7)	voltage
-	628	v(x2.out.t8)	voltage
-	629	v(x2.out.t9)	voltage
-	630	v(x2.vdd.n0)	voltage
-	631	v(x2.vdd.n1)	voltage
-	632	v(x2.vdd.n2)	voltage
-	633	v(x2.vdd.n3)	voltage
-	634	v(x2.vdd.n4)	voltage
-	635	v(x2.vdd.n5)	voltage
-	636	v(x2.vdd.n6)	voltage
-	637	v(x2.vdd.n7)	voltage
-	638	v(x2.vdd.n8)	voltage
-	639	v(x2.vdd.n9)	voltage
-	640	v(x2.vdd.n10)	voltage
-	641	v(x2.vdd.n11)	voltage
-	642	v(x2.vdd.n12)	voltage
-	643	v(x2.vdd.n13)	voltage
-	644	v(x2.vdd.n14)	voltage
-	645	v(x2.vdd.n15)	voltage
-	646	v(x2.vdd.n16)	voltage
-	647	v(x2.vdd.n17)	voltage
-	648	v(x2.vdd.n18)	voltage
-	649	v(x2.vdd.n19)	voltage
-	650	v(x2.vdd.n20)	voltage
-	651	v(x2.vdd.n21)	voltage
-	652	v(x2.vdd.n22)	voltage
-	653	v(x2.vdd.n23)	voltage
-	654	v(x2.vdd.n24)	voltage
-	655	v(x2.vdd.n25)	voltage
-	656	v(x2.vdd.n26)	voltage
-	657	v(x2.vdd.n27)	voltage
-	658	v(x2.vdd.n28)	voltage
-	659	v(x2.vdd.n29)	voltage
-	660	v(x2.vdd.n30)	voltage
-	661	v(x2.vdd.n31)	voltage
-	662	v(x2.vdd.n32)	voltage
-	663	v(x2.vdd.n33)	voltage
-	664	v(x2.vdd.n34)	voltage
-	665	v(x2.vdd.n35)	voltage
-	666	v(x2.vdd.n36)	voltage
-	667	v(x2.vdd.n37)	voltage
-	668	v(x2.vdd.n38)	voltage
-	669	v(x2.vdd.n39)	voltage
-	670	v(x2.vdd.n40)	voltage
-	671	v(x2.vdd.n41)	voltage
-	672	v(x2.vdd.n42)	voltage
-	673	v(x2.vdd.n43)	voltage
-	674	v(x2.vdd.n44)	voltage
-	675	v(x2.vdd.n45)	voltage
-	676	v(x2.vdd.n46)	voltage
-	677	v(x2.vdd.n47)	voltage
-	678	v(x2.vdd.n48)	voltage
-	679	v(x2.vdd.n49)	voltage
-	680	v(x2.vdd.n50)	voltage
-	681	v(x2.vdd.n51)	voltage
-	682	v(x2.vdd.n52)	voltage
-	683	v(x2.vdd.n53)	voltage
-	684	v(x2.vdd.n54)	voltage
-	685	v(x2.vdd.n55)	voltage
-	686	v(x2.vdd.n56)	voltage
-	687	v(x2.vdd.n57)	voltage
-	688	v(x2.vdd.n58)	voltage
-	689	v(x2.vdd.n59)	voltage
-	690	v(x2.vdd.n60)	voltage
-	691	v(x2.vdd.n61)	voltage
-	692	v(x2.vdd.n62)	voltage
-	693	v(x2.vdd.n63)	voltage
-	694	v(x2.vdd.n64)	voltage
-	695	v(x2.vdd.n65)	voltage
-	696	v(x2.vdd.n66)	voltage
-	697	v(x2.vdd.n67)	voltage
-	698	v(x2.vdd.n68)	voltage
-	699	v(x2.vdd.n69)	voltage
-	700	v(x2.vdd.n70)	voltage
-	701	v(x2.vdd.n71)	voltage
-	702	v(x2.vdd.n72)	voltage
-	703	v(x2.vdd.n73)	voltage
-	704	v(x2.vdd.n74)	voltage
-	705	v(x2.vdd.n75)	voltage
-	706	v(x2.vdd.n76)	voltage
-	707	v(x2.vdd.n77)	voltage
-	708	v(x2.vdd.n78)	voltage
-	709	v(x2.vdd.n79)	voltage
-	710	v(x2.vdd.n80)	voltage
-	711	v(x2.vdd.n81)	voltage
-	712	v(x2.vdd.n82)	voltage
-	713	v(x2.vdd.n83)	voltage
-	714	v(x2.vdd.n84)	voltage
-	715	v(x2.vdd.n85)	voltage
-	716	v(x2.vdd.n86)	voltage
-	717	v(x2.vdd.n87)	voltage
-	718	v(x2.vdd.n88)	voltage
-	719	v(x2.vdd.n89)	voltage
-	720	v(x2.vdd.n90)	voltage
-	721	v(x2.vdd.n91)	voltage
-	722	v(x2.vdd.n92)	voltage
-	723	v(x2.vdd.n93)	voltage
-	724	v(x2.vdd.n94)	voltage
-	725	v(x2.vdd.n95)	voltage
-	726	v(x2.vdd.n96)	voltage
-	727	v(x2.vdd.n97)	voltage
-	728	v(x2.vdd.n98)	voltage
-	729	v(x2.vdd.n99)	voltage
-	730	v(x2.vdd.n100)	voltage
-	731	v(x2.vdd.n101)	voltage
-	732	v(x2.vdd.n102)	voltage
-	733	v(x2.vdd.n103)	voltage
-	734	v(x2.vdd.n104)	voltage
-	735	v(x2.vdd.n105)	voltage
-	736	v(x2.vdd.n106)	voltage
-	737	v(x2.vdd.n107)	voltage
-	738	v(x2.vdd.n108)	voltage
-	739	v(x2.vdd.n109)	voltage
-	740	v(x2.vdd.n110)	voltage
-	741	v(x2.vdd.n111)	voltage
-	742	v(x2.vdd.n112)	voltage
-	743	v(x2.vdd.n113)	voltage
-	744	v(x2.vdd.n114)	voltage
-	745	v(x2.vdd.t0)	voltage
-	746	v(x2.vdd.t1)	voltage
-	747	v(x2.vdd.t2)	voltage
-	748	v(x2.vdd.t3)	voltage
-	749	v(x2.vdd.t4)	voltage
-	750	v(x2.vdd.t5)	voltage
-	751	v(x2.vdd.t6)	voltage
-	752	v(x2.vdd.t7)	voltage
-	753	v(x2.vdd.t8)	voltage
-	754	v(x2.vdd.t9)	voltage
-	755	v(x2.vdd.t10)	voltage
-	756	v(x2.vdd.t11)	voltage
-	757	v(x2.vdd.t12)	voltage
-	758	v(x2.vdd.t13)	voltage
-	759	v(x2.vdd.t14)	voltage
-	760	v(x2.vdd.t15)	voltage
-	761	v(x2.vdd.t16)	voltage
-	762	v(x2.vdd.t17)	voltage
-	763	v(x2.vdd.t18)	voltage
-	764	v(x2.vdd.t19)	voltage
-	765	v(x2.vdd.t20)	voltage
-	766	v(x2.vdd.t21)	voltage
-	767	v(x2.vdd.t22)	voltage
-	768	v(x2.vdd.t23)	voltage
-	769	v(x2.vdd.t24)	voltage
-	770	v(x2.vdd.t25)	voltage
-	771	v(x2.vdd.t26)	voltage
-	772	v(x2.vdd.t27)	voltage
-	773	v(x2.vdd.t28)	voltage
-	774	v(x2.vdd.t29)	voltage
-	775	v(x2.x1.x1.xm4.g)	voltage
-	776	v(x2.x1.x1.xm5.s)	voltage
-	777	v(x2.x1.x2.xm4.g)	voltage
-	778	v(x2.x1.x2.xm5.s)	voltage
-	779	v(x2.x1.x3.xm4.g)	voltage
-	780	v(x2.x1.x3.xm5.s)	voltage
-	781	v(x2.x1.x4.vinn)	voltage
-	782	v(x2.x1.x4.xm4.g)	voltage
-	783	v(x2.x1.x4.xm5.s)	voltage
-	784	v(x2.x1.xc1.c1)	voltage
-	785	v(x2.x5.out)	voltage
-	786	v(x2.x5.xr2.r1)	voltage
-	787	v(x2.x5.xr4.r2)	voltage
-	788	v(x2.x5.xr6.r1)	voltage
-	789	v(x2.x5.xr8.r1)	voltage
-	790	v(x2.x5.xr9.r2)	voltage
-	791	v(x2.x5.xr10.r1)	voltage
-	792	v(x2.x5.xr11.r2)	voltage
-	793	v(x2.x18.x0.rb)	voltage
-	794	v(x2.x42.x0.rb)	voltage
+	575	v(x2.gnd.n398)	voltage
+	576	v(x2.gnd.n399)	voltage
+	577	v(x2.gnd.n400)	voltage
+	578	v(x2.gnd.n401)	voltage
+	579	v(x2.gnd.n402)	voltage
+	580	v(x2.gnd.t0)	voltage
+	581	v(x2.gnd.t1)	voltage
+	582	v(x2.gnd.t2)	voltage
+	583	v(x2.gnd.t3)	voltage
+	584	v(x2.gnd.t4)	voltage
+	585	v(x2.gnd.t5)	voltage
+	586	v(x2.gnd.t6)	voltage
+	587	v(x2.gnd.t7)	voltage
+	588	v(x2.gnd.t8)	voltage
+	589	v(x2.gnd.t9)	voltage
+	590	v(x2.gnd.t10)	voltage
+	591	v(x2.gnd.t11)	voltage
+	592	v(x2.gnd.t12)	voltage
+	593	v(x2.gnd.t13)	voltage
+	594	v(x2.gnd.t14)	voltage
+	595	v(x2.gnd.t15)	voltage
+	596	v(x2.gnd.t16)	voltage
+	597	v(x2.gnd.t17)	voltage
+	598	v(x2.gnd.t18)	voltage
+	599	v(x2.gnd.t19)	voltage
+	600	v(x2.gnd.t20)	voltage
+	601	v(x2.gnd.t21)	voltage
+	602	v(x2.gnd.t22)	voltage
+	603	v(x2.gnd.t23)	voltage
+	604	v(x2.gnd.t24)	voltage
+	605	v(x2.gnd.t25)	voltage
+	606	v(x2.gnd.t26)	voltage
+	607	v(x2.gnd.t27)	voltage
+	608	v(x2.gnd.t28)	voltage
+	609	v(x2.gnd.t29)	voltage
+	610	v(x2.gnd.t30)	voltage
+	611	v(x2.gnd.t31)	voltage
+	612	v(x2.gnd.t32)	voltage
+	613	v(x2.gnd.t33)	voltage
+	614	v(x2.gnd.t34)	voltage
+	615	v(x2.gnd.t35)	voltage
+	616	v(x2.gnd.t36)	voltage
+	617	v(x2.out.n0)	voltage
+	618	v(x2.out.n1)	voltage
+	619	v(x2.out.n2)	voltage
+	620	v(x2.out.n3)	voltage
+	621	v(x2.out.n4)	voltage
+	622	v(x2.out.n5)	voltage
+	623	v(x2.out.n6)	voltage
+	624	v(x2.out.n7)	voltage
+	625	v(x2.out.t0)	voltage
+	626	v(x2.out.t1)	voltage
+	627	v(x2.out.t2)	voltage
+	628	v(x2.out.t3)	voltage
+	629	v(x2.out.t4)	voltage
+	630	v(x2.out.t5)	voltage
+	631	v(x2.out.t6)	voltage
+	632	v(x2.out.t7)	voltage
+	633	v(x2.out.t8)	voltage
+	634	v(x2.out.t9)	voltage
+	635	v(x2.vdd.n0)	voltage
+	636	v(x2.vdd.n1)	voltage
+	637	v(x2.vdd.n2)	voltage
+	638	v(x2.vdd.n3)	voltage
+	639	v(x2.vdd.n4)	voltage
+	640	v(x2.vdd.n5)	voltage
+	641	v(x2.vdd.n6)	voltage
+	642	v(x2.vdd.n7)	voltage
+	643	v(x2.vdd.n8)	voltage
+	644	v(x2.vdd.n9)	voltage
+	645	v(x2.vdd.n10)	voltage
+	646	v(x2.vdd.n11)	voltage
+	647	v(x2.vdd.n12)	voltage
+	648	v(x2.vdd.n13)	voltage
+	649	v(x2.vdd.n14)	voltage
+	650	v(x2.vdd.n15)	voltage
+	651	v(x2.vdd.n16)	voltage
+	652	v(x2.vdd.n17)	voltage
+	653	v(x2.vdd.n18)	voltage
+	654	v(x2.vdd.n19)	voltage
+	655	v(x2.vdd.n20)	voltage
+	656	v(x2.vdd.n21)	voltage
+	657	v(x2.vdd.n22)	voltage
+	658	v(x2.vdd.n23)	voltage
+	659	v(x2.vdd.n24)	voltage
+	660	v(x2.vdd.n25)	voltage
+	661	v(x2.vdd.n26)	voltage
+	662	v(x2.vdd.n27)	voltage
+	663	v(x2.vdd.n28)	voltage
+	664	v(x2.vdd.n29)	voltage
+	665	v(x2.vdd.n30)	voltage
+	666	v(x2.vdd.n31)	voltage
+	667	v(x2.vdd.n32)	voltage
+	668	v(x2.vdd.n33)	voltage
+	669	v(x2.vdd.n34)	voltage
+	670	v(x2.vdd.n35)	voltage
+	671	v(x2.vdd.n36)	voltage
+	672	v(x2.vdd.n37)	voltage
+	673	v(x2.vdd.n38)	voltage
+	674	v(x2.vdd.n39)	voltage
+	675	v(x2.vdd.n40)	voltage
+	676	v(x2.vdd.n41)	voltage
+	677	v(x2.vdd.n42)	voltage
+	678	v(x2.vdd.n43)	voltage
+	679	v(x2.vdd.n44)	voltage
+	680	v(x2.vdd.n45)	voltage
+	681	v(x2.vdd.n46)	voltage
+	682	v(x2.vdd.n47)	voltage
+	683	v(x2.vdd.n48)	voltage
+	684	v(x2.vdd.n49)	voltage
+	685	v(x2.vdd.n50)	voltage
+	686	v(x2.vdd.n51)	voltage
+	687	v(x2.vdd.n52)	voltage
+	688	v(x2.vdd.n53)	voltage
+	689	v(x2.vdd.n54)	voltage
+	690	v(x2.vdd.n55)	voltage
+	691	v(x2.vdd.n56)	voltage
+	692	v(x2.vdd.n57)	voltage
+	693	v(x2.vdd.n58)	voltage
+	694	v(x2.vdd.n59)	voltage
+	695	v(x2.vdd.n60)	voltage
+	696	v(x2.vdd.n61)	voltage
+	697	v(x2.vdd.n62)	voltage
+	698	v(x2.vdd.n63)	voltage
+	699	v(x2.vdd.n64)	voltage
+	700	v(x2.vdd.n65)	voltage
+	701	v(x2.vdd.n66)	voltage
+	702	v(x2.vdd.n67)	voltage
+	703	v(x2.vdd.n68)	voltage
+	704	v(x2.vdd.n69)	voltage
+	705	v(x2.vdd.n70)	voltage
+	706	v(x2.vdd.n71)	voltage
+	707	v(x2.vdd.n72)	voltage
+	708	v(x2.vdd.n73)	voltage
+	709	v(x2.vdd.n74)	voltage
+	710	v(x2.vdd.n75)	voltage
+	711	v(x2.vdd.n76)	voltage
+	712	v(x2.vdd.n77)	voltage
+	713	v(x2.vdd.n78)	voltage
+	714	v(x2.vdd.n79)	voltage
+	715	v(x2.vdd.n80)	voltage
+	716	v(x2.vdd.n81)	voltage
+	717	v(x2.vdd.n82)	voltage
+	718	v(x2.vdd.n83)	voltage
+	719	v(x2.vdd.n84)	voltage
+	720	v(x2.vdd.n85)	voltage
+	721	v(x2.vdd.n86)	voltage
+	722	v(x2.vdd.n87)	voltage
+	723	v(x2.vdd.n88)	voltage
+	724	v(x2.vdd.n89)	voltage
+	725	v(x2.vdd.n90)	voltage
+	726	v(x2.vdd.n91)	voltage
+	727	v(x2.vdd.n92)	voltage
+	728	v(x2.vdd.n93)	voltage
+	729	v(x2.vdd.n94)	voltage
+	730	v(x2.vdd.n95)	voltage
+	731	v(x2.vdd.n96)	voltage
+	732	v(x2.vdd.n97)	voltage
+	733	v(x2.vdd.n98)	voltage
+	734	v(x2.vdd.n99)	voltage
+	735	v(x2.vdd.n100)	voltage
+	736	v(x2.vdd.n101)	voltage
+	737	v(x2.vdd.n102)	voltage
+	738	v(x2.vdd.n103)	voltage
+	739	v(x2.vdd.n104)	voltage
+	740	v(x2.vdd.n105)	voltage
+	741	v(x2.vdd.n106)	voltage
+	742	v(x2.vdd.n107)	voltage
+	743	v(x2.vdd.n108)	voltage
+	744	v(x2.vdd.n109)	voltage
+	745	v(x2.vdd.n110)	voltage
+	746	v(x2.vdd.n111)	voltage
+	747	v(x2.vdd.n112)	voltage
+	748	v(x2.vdd.n113)	voltage
+	749	v(x2.vdd.n114)	voltage
+	750	v(x2.vdd.t0)	voltage
+	751	v(x2.vdd.t1)	voltage
+	752	v(x2.vdd.t2)	voltage
+	753	v(x2.vdd.t3)	voltage
+	754	v(x2.vdd.t4)	voltage
+	755	v(x2.vdd.t5)	voltage
+	756	v(x2.vdd.t6)	voltage
+	757	v(x2.vdd.t7)	voltage
+	758	v(x2.vdd.t8)	voltage
+	759	v(x2.vdd.t9)	voltage
+	760	v(x2.vdd.t10)	voltage
+	761	v(x2.vdd.t11)	voltage
+	762	v(x2.vdd.t12)	voltage
+	763	v(x2.vdd.t13)	voltage
+	764	v(x2.vdd.t14)	voltage
+	765	v(x2.vdd.t15)	voltage
+	766	v(x2.vdd.t16)	voltage
+	767	v(x2.vdd.t17)	voltage
+	768	v(x2.vdd.t18)	voltage
+	769	v(x2.vdd.t19)	voltage
+	770	v(x2.vdd.t20)	voltage
+	771	v(x2.vdd.t21)	voltage
+	772	v(x2.vdd.t22)	voltage
+	773	v(x2.vdd.t23)	voltage
+	774	v(x2.vdd.t24)	voltage
+	775	v(x2.vdd.t25)	voltage
+	776	v(x2.vdd.t26)	voltage
+	777	v(x2.vdd.t27)	voltage
+	778	v(x2.vdd.t28)	voltage
+	779	v(x2.vdd.t29)	voltage
+	780	v(x2.x1.x1.xm4.g)	voltage
+	781	v(x2.x1.x1.xm5.s)	voltage
+	782	v(x2.x1.x2.xm4.g)	voltage
+	783	v(x2.x1.x2.xm5.s)	voltage
+	784	v(x2.x1.x3.xm4.g)	voltage
+	785	v(x2.x1.x3.xm5.s)	voltage
+	786	v(x2.x1.x4.vinn)	voltage
+	787	v(x2.x1.x4.xm4.g)	voltage
+	788	v(x2.x1.x4.xm5.s)	voltage
+	789	v(x2.x1.xc1.c1)	voltage
+	790	v(x2.x5.out)	voltage
+	791	v(x2.x5.xr2.r1)	voltage
+	792	v(x2.x5.xr4.r2)	voltage
+	793	v(x2.x5.xr6.r1)	voltage
+	794	v(x2.x5.xr8.r1)	voltage
+	795	v(x2.x5.xr9.r2)	voltage
+	796	v(x2.x5.xr10.r1)	voltage
+	797	v(x2.x5.xr11.r2)	voltage
+	798	v(x2.x34.x0.rb)	voltage
+	799	v(x2.x41.x0.rb)	voltage
 Binary:
-        4╫∙й▓+?        млллллЭ?&V oэ°:?тОJ╦J©└ф∙4E╒=:╤hE╖%╣=ып⌠≥=Л2╒┴ж╚╙=\5╞╨~≥©=├>сТш╥═=к`клллЭ?┐йлллЭ?ПллллЭ?╡ллллЭ?ЮйлллЭ?ХhллллЭ?╛n,k=─├о╤≤╔─=ф>УWнщ]=╞огЖfz>?pj>╝HBЯ┐j>Fh^w#╒=▓шYTТ╢=fQ·w≥=ежZU'╙=~)\UС╬=┘Фe┐═=╚YклллЭ?uйлллЭ?VллллЭ?-ллллЭ?▐уйлллЭ?°fллллЭ?Ц╫o°k=█╡Ъ5Й─=┴║rНX^=╞огЖfz>?pj>╝HBЯ┐j>f╬Nr█"╒=M╠■^Ю╣=h+@н╚≤=Цi╓Н╗═╙=Г╡L╫⌡≈©=▀≥%XW⌠═=Q]клллЭ?▄йлллЭ?.ллллЭ?╧ллллЭ?"ЮйлллЭ?ФhллллЭ?b&)bx@j=o~УI─=&mЫgз\=╞огЖfz>?pj>╝HBЯ┐j>p=Ёl⌠7ё=ЯЕХt╔щ╢=Z©╦чж÷=═{gт≥░╚=Мx╙©L©==OЙ`&╓="аклллЭ?╦/йлллЭ?ЕFллллЭ?ИллллЭ?╛жйлллЭ?HhллллЭ?тЯiGz8y=┼╠q╥x▐=ЮЧ╝ЕЪoi=J┬цЬёX> xLF╪H>┌RRo╓H>:h╢©Щk╫>Вo╚°╘╪>\fl╘╪>#ЭУ╤ллЭ?g^Ж╤ллЭ?LуТ╤ллЭ?■E╧╦ллЭ?UЩ╧╦ллЭ?М╥╦ллЭ?x^2╗ллЭ?>3╗ллЭ?╢1╗ллЭ?╢▀аллЭ?ф▀▀аллЭ?\s┴аллЭ?Е─gd∙>жO`Cd∙>/М#Х	d∙>~.─4║>}j╕W║>vц-║>щ█┼`ъ╦>┌│гaъ╦>≤^щ(`ъ╦>р;МГ[╟>┬{ЫШЬ[╟>▌r]1Б[╟>┐С╨╢▀╣>aU╫РrZ╣>D7nBCZ╣>[┘юллЭ?gИюллЭ?YюллЭ?╣╓Ы╓ллЭ?ЧЗ╓ллЭ?ч}Ь╓ллЭ?▄VBЩ?⌡>Ч&Т(-@⌡>з Л╒Я?⌡>Ъ├█NТm╢>8⌠0 n╢>──ФzЯm╢>╠с%к╫>╗ТSkц╫>╬▐ю⌠╫>╠╘Гц9∙>╝КU:∙>%ж╝д╞9∙>"ёг≤╓>╒xэiщ≤╓>Д╔⌡хц≤╓>обллЭ?┴бллЭ?QwбллЭ?сpаллЭ?АталлЭ?*EаллЭ?BЛjQC╥>|(эhО─╤>хг▄╫©─╤>9∙╠)░╢>&=╧s)░╢>б▐э'░╢>L TqP╝╓>OЫ0U╝╓>░┴╕чN╝╓>Ax─ё╧(╢>pПХ╨(╢>ПSu?╧(╢>∙√z╦ч╥>ч╘║zдч╥>лН∙╣ч╥>млллллЭ?"PН+reЛ?МsvФж}Л?@ptL╓©млллллЛ?┴╖DQ_ М?флллллЛ?▐oMIщFЦ?[Ш│≤Кт╜?:─H╫Ц?5Cщ9T╝?М÷▄Т╖/Ц?w'dуЭх╛?ю╧B╤╜Б?}ж%.╫?╞дw▒┌╔Э?▀╪"V8~Л?ялллллл?нлллллэ?яллллл╪?яллллл╪?нлллллл? ≥≥≥≥≥У?ллллллЛ?ФЮ╞Ч╪И▒?ш┤Л█и?║?Э2╣╠┬╤Ш?мг6Бй╪╔>Зн\I╣█ >N3%Q√>┌З}VВ▄>╨Kй√╝▒>Jх/Ф0╦∙>я┬0]╫e╪>^)йaD?MРн┌}s0? d┬c╓8ц>Жч╜Р░╩>█р'#Л╡>Щ!3Р╪>╣√√CxN╞>&H[╖Яб> ╩с■┬й>Х╫)pп└Р>H>Tu▄?3?Д÷cфУ2?∙5&ИQ╝?╙р∙╞Jн?nЦЫвЬл?р)JgЪ╚?Ё≈А║┴	Д>╫я(╡┬э><Ыя╦a╜к>_^╧ фэ>O`ц"лу>я1.Л╕Ц>'Iт╨ж>┐ЬxвЦ>╓▄s├╪1ж>©8уz\ш>	c╧ -Qж>mn╜C╘$ж>║U╬╪x}ж>FъБ≥Зэ>NйЫ
-[^ш>cxок|≈з>фпшпГй>Лс}Рл<A>C░▐╞X>ЭjD┤Лhд>┐┌I┴{ь╬>,б\A╞й╢>oЪ╫╬║>┬ЪZR{▄╓>ыЁК_]╞>=д]≈L╞╜>TчШ2Хr╒>┴ныМoЮ╘> ┴√S{╤╒>д3■k■%╦>$/j²ч═>√Е	bК╓>[╩Ш╗┴с>:ЖV_┬Б>·шM═>+zЭ/L╔╘>├hГg╗>Ор~Л╚>Чj┴jнS·>г╦┘╨эd╠>Хtжй╣┘>s┐f≥o∙>САR╩@Б>?ЖN:9с>{о┬┼\1?V}|М⌠к?Щца3Q?фL©X╨S?3·║1V?yи4П)Н2?	k┴qb÷1?²ЧоVS?╓М÷uu?ц╡▒!м?Ге.^К>s╚═l║>ВkGлп█>▀)k~Э}>╔r>s@9ц>B$У*ц>`-oмl╚╕>╨Х╚$╕>\≥n ▓≤╔>┴#╣3	≤>(·╓.R┬>фJ%⌡╖`═>╢в^╓≤╞>H┬5/P?╚>≥яХЗt╠╚>t╨QB.0╛> N1j:÷>G6T4√╜╛>2ыНPЁ>/lК╚"╠>К;yЦФ╟>Ц&∙°Z╞╗>╟hc√ф∙⌡>ГNU║╗м╓>-│*иf├>ЪOГЗ┘ >О2╖5мf╗>ШQC0у■>]╖"╞>┼р)Э║ц■>rзЫ■2╙>р@:╢>кT;D▒L╡>▌w°МДi╤>z/_)7╟>uв▒║╤╨>а=│█рр>+_Яшг╔п>▀!Чvее>╒М.q%■╨>оTэ╟╠>╚шГД╡>╕"ре╛>░тlA
-|╤>╟╫^2Ч╗>w├ьO С╛>$74$╪╚>Л┴о0╬╙>йrQ©г┬²>╚)F└⌡б>o&⌠┴╫>Л)о≈нЁ>p─ JГ╠>┼╥╤d⌠щ╞>2╓Х▒XХ╛>BnЦ`>·>5ЮбL╥>БhВЁh/╥>Я┬фp_╨>~jfYh╥ц>╩:⌡п⌡е>д))э╫∙╨>ц╫л)╖Е╤>БКhю├╧>Ъ√ЮД2m╦>Е╚БY╖╤>d`|·ьЕ╢>╕■┘э>M╕>┌Lu
-2Z╩>	p wН╩>┼!Lx4n╪>NS≈#Jю>²AW╚Ею> 9ж%≥╙б>k;Х┴≤:а>7b╒°╡ё╦>s╟ЫщБf╓>~XC║▓Ё>oвkЭx╢>ZNI7ёЩ■>╠f:5b"╡>т▄H©▒ф⌠>J▐рdL÷⌠>─zр╔╟▓>З?Их▓>Pю╦═E╞▒>ЫйВ┬оП░>·Ь║Р╗√█>lx,!%─>FрНЖл■> uщL >БЁ L═>lИн╣°>Ьх',/╜≤>Ц`BI S⌠>N_Ёк,\≈>ячH╤лБ≈>|е::g■>Tк√Фщ≈>_ аOь,≤>╝ЦхiQ√>U╣kkVq°>ф=ьБ╠>▄1ваX╬>=ч╤█║е>Ж┤ы°╟ч>"-Х┘,"ю>╥C┤т╤>0гя▀╙>ylх4	║>d└М,╡═>x≤1╘─╥>d#}и>а>!(╜АЗыд>Л∙iвMhе>─©&	'И>!Eяпa╞ч>                [│Т┬a▒>b│Т┬a║>бnM²╙>∙а┼ТЗ÷╣>б_q)э'а>▒ф $Нv╧>RН&u≈Z│>-д┴(─_V>@≤уг>Y>╡v&R▄'╥>И║Ёю(╥>ц╝Нj≈╧>0═vxц╦╪>█╓@m\^╥>8╙?р╟╫>ыc╖╬>Я4зId<Ё>{╦,/o┘╣>+v-Лtя╨>├UО▄ъ╗>Fv0╛┐Ч╤>≈├ZBOJ╥>)╜╙А	л╪>:\VLи╣>I6% Ч╢╦>DTмDC]╤>GЪЩ╥╬НЁ>╫E╗54╡>л>╕╕5Ю╒>C]м╚°rю>ЬИ╔╩╜pх>_EL:(ю>▌ы7CЩ╪>^■,{k╦>@Д#+█╗>⌡╬┼</╥>╙ч╙┴╦>Н╝╣Xl╪>╨vГ╡ю>fzuюEе>░и г>*jSHTЙд>wх(CQъц>P└ю≥Yю>KW%K╬>U║NA╪>з>8╟[│>Mй .X\r>;ю╕©Д%╩>╜к.╩>!i·@8╩>D9Ъ)╥>';~В@╥∙>ггcч*┬>З#3~Лw>┬╗Yн═┬>≥ck>ЁIv#│[>ЮтЮ%z©Z>┤÷	тё7>.иV▀Э)0>╚.<~;3>CЯS⌡─B>-╜╚z·~B>≥╘
-2⌠+>fц░у√/>z│ОЛб^3>OM╨о╪L>|≤▐oЩpL>╩>F╩▌L>#Д╚÷╢L>НГюп!еJ>╓░═ь$eB>uп╤▒┴B>ы?=о?Ж?>Виых@8?>Ш]7█B>я┼·└у╞B>Д'ь√┘B>/`╨Ю╓>IШU+HсB>_
-Н25фW>ч╨Я╔э╥B>)kR└h;B>М$└]B>┌`м°lB>╛_ qiB>ч╫_⌡O⌡B>хР-(.I.>l	П╡╥╙+>√Т⌠Л╧>╕╣Пz+иN>√ ╝\O>bоЩПсJV>8cЁ=Бc>Ъ▌аDm>∙>#С_7y∙>┴█Цn*h>▒╛}:╗┤>АакY>Qa╧╝дEM>Гl:┴╓M>.]▐Y╛L>╤gкр╙╕L>О!1ш[M>зB√╚кL>%Ё⌠э_KH>A╬©─AX>ОцGрГX>ё╜rЁpПH>╖d╞\?КP>ы ┼aNяL>ь└5`░T>ДХ╕жЫ┴L>}U╝╓╗L>4ОНОЦеL>╜КкЧлL>-lоyф╪L>√ыБh─L>└tРЙI>s:▐╔╛L>╜╔$∙Ь#V>░N/║qCR>⌠OТы≤O>4цве╦J>╩╤ТAщI>в@⌡р':>zС║а	/M>з╖╗з╘ЛM>td╧DтW>╒Г╝!Ъ`Y>экЬ╓ь[>{ё╛еhl>M┌Впn>n>хf_eG╛p>q╝h,vuu>k┴+{м6┘>╢Zh≤▒╖┘>┐~ш┼h├>#FK29лb>ъ	C^ыZ>∙├Щё╧X>╛cХ═X>ЪnЧ╞зMX>хЛя─⌡Q>∙м╝▓uВJ>╓cЧ╖РщB>╧	⌠╟гJ>▌в-╒юИP>ZзK╬{{T>║╘I.[>²A┤У5`[>Бф╢'Z>В*╖╜1╪B>╫}2v7>E}ФA>]8	(яB>C╝°ffCB>zъG╖ЩA>0╡Ийн*B>вТ╘кZB>КШ√XЗ∙B>[cыг├сB>t^²>∙ЯY>ЦяjН╗[>k%[>╒Ы╠▓Ye\>юfz÷╗Eb>÷$÷аН√>╣╬^q-≈>Ыn╙Q░o≈>YЧъЬ4Ё>O Уй╘Ё>╡Z.`Ё>Ч┼╕ш╧->vчС╔жm\>з╡o╧0╜e>)v"Ц╔x┼>КW╖SПXД>"3.┼Д>h}с╝╫Д>MяlВr0?	*V
-а1?·яР╒e 1?┼ёN▀└Ю2?DXcзФ2?ги8QКp?▒А╖Ъ≈iв>v─~Щ╢т>в7Г·▌к>Еr⌠vг>d■?╨[ё>┼▒┴h╠>rnv╙^A╤>уЪ┤Юь/$?h└u█bНС>Лh■╞╧>л:╪w,╔>N7*∙>╟▒Q▓,≤>╢Зъ\I⌡>[|ЯLё>ФЮ╞Ч╪И▒?W▓╜\D?Ф÷РЪH?lп Шь?⌡>ЪQ,ж║>■3_╞ч╥>&EЗОы[╟>╫M┌З╘??Iа.@Кm╢>        [│Т┬a▒>b│Т┬a║>бnM²╙>▓Ю°▌9∙>╕qшЁ≤╓>                                kхШ
-d∙>ШщYж#▀K?╖mc,╬╣>О-ешпw⌠?йРо(╣>iУ\╓E▒?▌ХцыФ╩>V<╫Чпw⌠?$╧J╞_ъ╦>┴≤╪{L?=(\DM╝╓>ы=Егi#?╬Уh F╪>х(Tяw⌠?T$Сб╦(╢>═МpqаL?Mъс	░╢>p░╙Ы╢©?МsvФж}Л?НsvФж}Л?НsvФж}Л?МsvФж}Л?МsvФж}Л?ХtvФж}Л?═tvФж}Л?ЛsvФж}Л?DZGU4}Л?t^h#5wЛ?Ще9m~Л?Bt	Мя┘Л?ХtvФж}Л?ХtvФж}Л?═tvФж}Л?МsvФж}Л?МsvФж}Л?МsvФж}Л?ЗсnХ°лЭ?8Г©ллЭ?╓I
-юллЭ?Ж лллЭ?1▒wаллЭ?щ1мюллЭ?уcюллЭ?.©ллЭ?°╣╫ллЭ?≈EИ╧ллЭ?╤°с╧ллЭ? Ж╥ллЭ?╓mлллЭ?╕ш≈еллЭ?s║&╪ллЭ?Ж╘хбллЭ?O╖Х╬ллЭ?	м┤аллЭ?╨'лллЭ?■Я2бллЭ?uo░аллЭ?Ъ·юллЭ?╬░юллЭ?}Чш╩ллЭ?ШUГ╧ллЭ?Ш$P╞ллЭ?ф9Х╔ллЭ?Q>└┤ллЭ?+╙CйллЭ?I╡,╩ллЭ?+▓~╥ллЭ?Йц/кллЭ?БG≈╥ллЭ?[К╧ллЭ?∙sZ╧ллЭ?6OЬ╦ллЭ?wt}╦ллЭ?к?Ь╥ллЭ?I&$╥ллЭ?WЕ╢ллЭ?ДСЁллЭ?MoY·ллЭ?░⌠"╣ллЭ?ДlT╦ллЭ?л╤ллЭ?ФЭц╤ллЭ?жН╟╤ллЭ?AJг╤ллЭ?tB╝╥ллЭ?∙к<╥ллЭ?	bкллЭ?·MlЁллЭ?ЫS╠ллЭ?нэЖ▒ллЭ?C/[ллЭ?@У`?клЭ?┴?ЬюллЭ?^ЗюллЭ?г}шкллЭ?бЪналлЭ?√дuаллЭ?Ыу1аллЭ?жТюллЭ?uI⌡юллЭ?wюллЭ?v╞-©ллЭ?s╬ллЭ?epкллЭ?÷WцллЭ?=ч+аллЭ?┘к╗бллЭ?ХM²аллЭ?JКаллЭ?╖ЗНкллЭ?ц[бллЭ?h√бллЭ?иziаллЭ?ШB\аллЭ?▌АВ©ллЭ?Pk©ллЭ?FpчЁллЭ?╬8╜ллЭ?HЖя▐ллЭ?≤Ф|йлЭ?!Z²╓ллЭ?=gё╓ллЭ?=3≥иллЭ?#x╖ллЭ?╤
-I╕ллЭ?²Yb╔ллЭ?Ъ╠▓╓ллЭ?uaёллЭ?7┼ё║ллЭ?▒T┐·ллЭ?Ё▒╟ ллЭ?r╫,хллЭ?уv╕╛ллЭ?<иL╔ллЭ?Ц╫^╙ллЭ?`п╕ллЭ?луз╖ллЭ?,ёшиллЭ?еW╘ллЭ?g█╗ллЭ?Ы╕ллЭ?)ЖЯ╔ллЭ?i`3║ллЭ?5пУ²ллЭ?{DxллЭ?ОЛzaллЭ?з°▌ЩклЭ?u7MЩглЭ?kGу╬лЭ?млллллЭ?нлллллЭ?[у7║мйЭ?QзД┐нЗ?gбЖ╤ллЭ?&j*ЛхЭ?э╤╨╦ллЭ?Л@╫aтхЭ?√MюллЭ?з ▀ё│лЭ?Э▄аллЭ?┌<э┤│лЭ??Ц лллЭ?ч&tМ~Э?мuлллЭ?H^к'╤┤Э?р█└йллЭ?┌m8tМ~Э?О▄кллЭ?wMдtМ~Э?ЙDбллЭ?ьcHЗ╥хЭ?╥:аллЭ?╒I├IохЭ?ЩjЗ╓ллЭ?ZE█6ЬхЭ?гм3╗ллЭ?2┘<йЮхЭ?млллллЭ?млллллЭ?млллллЭ?млллллЭ?├ъ≥-;9Ц?$ЬБ╘x╖╜?ЧКVНЦ?8P*╖e╝?иЦiKF,Ц?UЬоp╜?>)6АпмЛ?ВНА√O≈Б?s7┐√z[╫?╚@f╬ М?┐Cдoу╤Л?=ЯеDY9ю?=ЯеDY9ю?Hy┬Kь>о?═й2о▓ЛТ?]Ф╣Иz5н?LХйъщ?┬д`ы9EЛ?├кФR#┘?1▓h;┼ёЭ?
+        4╫∙й▓+?        млллллЭ?&V oэ°:?тОJ╦J©└ф∙4E╒=:╤hE╖%╣=ып⌠≥=Л2╒┴ж╚╙=\5╞╨~≥©=├>сТш╥═=к`клллЭ?┐йлллЭ?ПллллЭ?╡ллллЭ?ЮйлллЭ?ХhллллЭ?╛n,k=─├о╤≤╔─=ф>УWнщ]=╞огЖfz>?pj>╝HBЯ┐j>Fh^w#╒=▓шYTТ╢=fQ·w≥=ежZU'╙=~)\UС╬=┘Фe┐═=╚YклллЭ?uйлллЭ?VллллЭ?-ллллЭ?▐уйлллЭ?°fллллЭ?Ц╫o°k=█╡Ъ5Й─=┴║rНX^=╞огЖfz>?pj>╝HBЯ┐j>f╬Nr█"╒=M╠■^Ю╣=h+@н╚≤=Цi╓Н╗═╙=Г╡L╫⌡≈©=▀≥%XW⌠═=Q]клллЭ?▄йлллЭ?.ллллЭ?╧ллллЭ?"ЮйлллЭ?ФhллллЭ?b&)bx@j=o~УI─=&mЫgз\=╞огЖfz>?pj>╝HBЯ┐j>p=Ёl⌠7ё=ЯЕХt╔щ╢=Z©╦чж÷=═{gт≥░╚=Мx╙©L©==OЙ`&╓="аклллЭ?╦/йлллЭ?ЕFллллЭ?ИллллЭ?╛жйлллЭ?HhллллЭ?тЯiGz8y=┼╠q╥x▐=ЮЧ╝ЕЪoi=J┬цЬёX> xLF╪H>┌RRo╓H>ИрУ╤ллЭ?-5Ж╤ллЭ?╛Т╤ллЭ?iT(Фт╦>ыp6sI╥>╥ф┼CI╥>б[МKл┌>▄гС╨╚л┌>Ф╫{╜4л┌>paз┤≤√>zУМRм≤√>∙@x≤√>ц╧■<▒D∙>s∙┼■>N┬XTк~■>`ЬЗ▓u"╡>xJИоv"╡>╟╓L1u"╡>]ДL▄Lw╜>О╔fOw╜>⌡>дKw╜>_▌@{4▀>f╝Иr4▀>╢▀Х┴4▀>╕╪Kv╡E╠>Б]yv╬E╠>├╚⌠▒╞E╠>KкS╪▄ч≈>Ж#A;√ч≈>V≈┴ч≈>ф╨бллЭ?еtбллЭ?cбллЭ?╜ZаллЭ?╪╬аллЭ? /аллЭ?EmюллЭ?SяюллЭ?Э@юллЭ?=b⌠сw╤>[├l"═╢╣>&wp╢╣>о╦╥═╪р╗>"А5ЫM╖>ЦnBъ≥M╖>┤П┼аллЭ?≤v▀аллЭ?2^┴аллЭ?эг▄l
+┐>\Fйжu
+┐>ЦЧ i
+┐>.{>Й╫╜>ПЙ	~,╫╜>╓ФЩ╪╜>(V├ 7╖>ЗyРeD7╖>┼╒Lя7╖>6┤л║П9░>=@■п9:░>ЭUэ9░>╥╧╦ллЭ?wв╧╦ллЭ??г╥╦ллЭ?·2╗ллЭ?aп2╗ллЭ?ыю0╗ллЭ?┘YЫ╓ллЭ?н╩Ы╓ллЭ?╜2Ь╓ллЭ?2G╨сЬ╜>_;≤&Ь╜>√vC,	Ь╜>млллллЭ?"PН+reЛ?╞w│n}Л?i▌H╥G╓©млллллЛ?┴╖DQ_ М?флллллЛ?▐oMIщFЦ?[Ш│≤Кт╜?:─H╫Ц?5Cщ9T╝?М÷▄Т╖/Ц?w'dуЭх╛?ю╧B╤╜Б?}ж%.╫?╞дw▒┌╔Э?▀╪"V8~Л?ялллллл?нлллллэ?яллллл╪?яллллл╪?нлллллл? ≥≥≥≥≥У?ллллллЛ?ФЮ╞Ч╪И▒?ш┤Л█и?║?Э2╣╠┬╤Ш?╤═zД┼#>д┌┬┘#a>&л╗x┌>≤∙С8т>AУ :т>╔CЫм r>┬Х╡;т>CS─#.╢>(╥rc6÷╖>"╣`╙Ф([>Xt▀√╕╝╖>b^О*и┘>╨knЮn>:эс}(яj>╤Ж°▄█ИF>Ёт%|н'F>	шwfуEB>]ю[6"╖T>hэJ■r8>5'С╡│юT>K)ьjцКT>╖T │юT>b$┼{юd>╙ZвЖek>g8j▓3┐i>юa/иеРT>н
+зГbT>[И(ф'└T>v?ёЫV>т_;╣n\>KжIJ┬d>и*^А·∙d>g+Щ7╢~d>\╜ц(Vжy>^bтДДe>╚U^ээd>hqXкi>i²]uИ╚a>К⌠Gw~аd>°╗е_	e>Х4Ы╔w╛d>Ш²A<Zрd>·д7Ьd>Ъ2CеМ ┴>O┤,#g█>Пu3┼4∙>Ф|─D▀╖>°╗╧Ч╓>hЗ@в7╔>ЯЫё+УЁ>ч├⌠к©Ё>1Vыv▒!╔>2CЧ╡1t{>ьfA©╒Х}>u▓Ж2╫┐>тzЬЪ={┬>TtЁ5д{>Я╧ж≈x>ъu8пT╛d>c╗ЯЬ}╩[>z╢╨Ш▄AL>lm Gf>,╙╜K█╗u>rот╧╞e>BГ┐ёт╞e>х≥╟r_╝e>U▄a⌠б╟>}╡╤╢>°иЯ─БЩ>~нВТ∙С>Ь÷bhфоt>╡╪ЗC$[>т▌²Щ> 'мjхВ>joц╙wёв>Ю▄▀3╚в>ZШЕ*nЁв>^∙(\G#С>1O≈┘≥bВ>T╟йJ╨WГ>;╒мVк╒В>_ф╬╥|'?╤Ф▒q▀?H
+²╕д▄?рбйф▀?·┼nЬ╝█?E╜3й}Ё/?┤╝Нс╔.?08г≈VБ>rYэ╠Й╨>fДc╦╧	╩>к╘WkАMЁ>pЗ┘0╠я╘>э*ЩцN≤╚>ЕиЯ═В╟> !─р╖╚>x3y▄K╞>Юg=\╟>ЁHж╓▄²>UXoX!?Щ▄╙^U╞┼>╖р7░4░>К╛┐фuю└>╧Эу╛░>╕7└╪┴▒░>3rР├╩├><6─Я■j└>■j╘,Чr>%6°∙[В┌>⌡B√Jd■┌>MнЩ1)Д■>>ЛА╪~╓>┤╩Y│Кq╓>4BnQt╟>·ю Т^╘⌠> П²╓ц░>fG▀П─>4╖PLрж▒>aаGэ╗Z■>mXАО>╗∙>юФ┘┘╞w╜>Ж╗Ё8пP╤>Y==H⌡> 9VчИ┌m>Hи┬▒r >░fcpЁн⌡>╓ИBO >│>ЮшсБ─└>GЗоfж'>─=эХд└>7/ёoЁ≤>Кxа≥SR∙>░г≈6Ё∙>Л≤KПd≥>ГШ▌щ&▌═>и0С∙≈>ШJ·Q╗)▌>A< D╬▐>бЁ=G╚▒>`╟─l98v>©╧⌡a─┐>y│╛@▒!┌>$░▓╢y:─>·~╒÷■│q>wl│s?├>S,R6Б▌>"▀Bg╔√┼>ъ]EЮ╠\▌>═⌠╧щк▒>╬+OK└ц>#иWU$╔я>R┴╓[Г▀?%[EBP┼?лIP0хHц>}?▌З╝_)?o╨i/L▀?ЪОwj∙.?а$хT▄N+?J9УЩ≈┬?&PЙ,Ж┬?╪╪╧Ъw>■В=u╡Ux>м²ч|⌠x>оЧ╤Ж╣ЫЗ>CУ∙╓>сqА0зЙ═>N▓ЙG╢∙> ╥─вД║>h╗─Фщ╗>м#л п├>z└Q▄z8w>┌jВ┌Ц■>z╙п_Lнё>у╟ы7║>6п└#©O²>╪ьЮ\эG}>╗WЦНБъ▒>=sя°Щ┬>а≥≥ЮН≈>xg0╔w║>°yF╓∙L▐>N╗П░>▐>▒J╧3f░>8╓└)▒>Й3╨в┘>,С`(°q>ЩСXЫ-м─>Aц°НT∙≥>ЩТь≥╖╠⌠>ьR"╠╣∙>н╪)о╪╟>rпэ/жи╩>bT;Ю╩>АГ╬~╟╫>c┤ЁЙ&©>(лш lU╬>i ЦМ▒Ч╦>$÷|╗■~╟>┤вO%йь√>≥ЕC╒═╠∙>ЁУ/╬й╟░>p\сШ⌠╓└>P╓└}ЭP┼>,⌡╝≈Щ▐>k58Y╢j⌠><C~cо_║>BZKMx⌠>dЙ1Щн║>:K≥∙сС╢>Vя─(Оa╛>│7(Os└╘>
+Ё8╢▄╕>╜q g╜>ЭdрY╧┐> nb]9┴>аЕ└╜*Ж├>0⌠Т9ОА┐>ЛХюBb┐>%9┐>eКKA=;▀>%ъ╟╩°▀>▀p(g╦╒▒>╒	╩┼▓>(▐╙ЯЁ∙>0▐╙ЯЁ╔>fQК?УF╟>ТvОHЁю>6ex_зв>UРЖg'═>)}╢?°°>┬╝g&*⌠>,lЫПшС░> 
+с╨▓>?╥д╙Ш╒>░эчwS╥>4у·sзП>┌Ж╕э▀▐╣>чy■ЧJ╣>┐;╛аF╗═>Щb├╚I|╣>╬╕	w/╢>Rэs╓Q|╦>▄▀iе╥>(╗|0z╣>rДj╪╡>&≥╡ху7╢>Ф┐Ьъ╘╤>KC/╘T ╠>╬х█≤6╡>+и▐УГ╠>Е╗ё|≥З╦>фf+x┌Ё>╪,+d╫╖>ц╗9╫╜р╙>{@▓F²T╜>vW┬HЦ╟>Mt∙ч+Ё>`щ┴.s▌╪>+\aкWo╬>╫=К°Ч┐©>░C|НVх>8┘X&H6к> V╓║nеЙ>z∙мр═ю>RN<x┬╖ю>ЖЩ\1й╥>цТ╠╛╠╞>(XМУУ╟>┴sBЦЕ╢>Гi┬цП· >ЛqЛQm═╘>k┤&╙>MЙ╖√	A╢>╒©█Б■╗>Ж╗╩к⌡>─Bд╙ ∙╕>╢Х╨>▐
+└г╠>:-╥╗
+╟>TwЮ┼Иq╛>;LБ[├╟>╡┤▄Ю╨╟>┴Йъ▀^Ё>ф╦ы<·║>!W├K╣>-.Я©е║>©6N≤╣>=∙╫б╣>rk!╬>Wiу╝╪>з∙b}=╥>\bЙн6a╠>HcщаЁ>[жvwХ╠>Иб²d╢>^tS[╟╣>тГx⌡╕╬>·а`?╥>!Г_▌н╚>Еu▄У@!╞>╞╗ +Оc╠>▐Цr$X╢>Aз#d[╥>lT░m⌡а>yЗ⌠1фб>НпKкrц>'5C3²нм>█╡-╤ып>O}╝уЦkЩ>Y%к∙!DЫ>c%к∙!D	?\X0С?Е°F├·)?▄ж?гn.?ЗGлм`.?Оч÷-+?╣дw²┴K)?n!cCu'?RЛ▀М*Ч>кDbЬЗЧ>жВЬ┌>╡Ч>ЛЯ╞╥lЧ>Ю5Г╘╕>Ёfшx╝Р>╠▒XйШР>СЛз╛ЛIС>U╛╪гкЖ>╡@█ъВ>р=й╟YTВ>Ё╚!ж╕ИР>тюLДх·>fX	%║>═┐Лn{>%!рB#fd>┼@B,█▀V>`┌Y╣╖Q>S|⌠│⌡Q>H_:Ь%╗F>OйД┐ЪнU>├д░EE╜Q>7jf▐q°M>X■Ац1╗4>й▌&[ M>Х>6o┐PD>╓╨PM>Р╞╥0·TM>F╩m$c▄M>bбШBь░M>ьфk┐ыM>cr├>)N>у5·╧┐c`>╚i≈l|a>▐К╨З2Ц`>Ю
+╢Z>I8mKm─Q>u'еp▒Q>Зв╒Щ║Q>├∙Щ═*R>Щ╖≥жЙp>╓√│ч∙
+y>b÷яx i>²ЛДйdd>·├ю▐щ_e>&NK╫щa>7┘a3°\>ФГ╕e|`>)пЕНQ╕X>iJ░'аT>╩Т^ ┐ЪU>│в}oJX>aшZXR⌡W>F]оbлT>[~27╛╞)>NИ?Уw╥a>└|≥b>с╡▀с4╘i>└7SE▀sl>├C│aXl>┴▓ДШk>╡б┼U>/F═cр╬)>░*╦~8>Ъ╚ялЙ┘S>▓э▌Lw╧S>=╖▓YОS>яny╪?"T>'┌}∙WT>l`jФ<рi>ФEЛw:k>┴{ДЕЧ#k>б7║ati>Ь;ъё⌡≈v>=о3ь;0╣>ЩCIi╣>GЕB╕╣>░Чю╡$цп>┌╟к2©п>Чrь	U╩п>■■rдёeI>[yЖ9;x>┘ь┌]	&V>ь┐ЫЧ LP>╨╖²≤©·	>ФЮ╞Ч╪И▒?D,ГИ▀?х~4gF?Q▓^л┌>:╨╣O≤√>⌠ЕуZ╘E╠>┬ЗзN7╖>ЭG═b┴?W┤XW╩9░>pОук3▀>\X0С?c%к∙!D	?Y%к∙!DЫ>        p░╙Ы╢©?╡⌠И╤ЭВ╜>        (▐╙ЯЁ∙>0▐╙ЯЁ╔>fQК?УF╟>╚-щfe
+┐>3Дч╙┴K?гF!sх╔>┘Ww⌡пw⌠?Ж#╠Ч╦⌠>з	╓E▒?Я≤eщЯ╢>6I┐упw⌠?ЙЫ╨╥t"╡>▓├▀ЗL?⌠1║b├ч≈>╟аPih#?ос"1╟├╤>╞MEАпw⌠?НkAкJw╜>OУcюL?7dт>М╪╜>╞w│n}Л?╠w│n}Л?╞w│n}Л?╟w│n}Л?╟w│n}Л?╠w│n}Л?╚	w│n}Л?b	w│n}Л?░ЩЯк|Л?EtlЭлvЛ?┼;й~Л?└Е@?i┘Л?╞w│n}Л?b	w│n}Л?╚	w│n}Л?╚	w│n}Л?╞w│n}Л?╞w│n}Л?°iХ°лЭ?+м©ллЭ?┬1
+юллЭ?⌠лллЭ?х{wаллЭ?2мюллЭ?кKюллЭ?;©ллЭ?ъ≈╫ллЭ?Н!И╧ллЭ?Дxс╧ллЭ?(ыУ╥ллЭ?RlлллЭ?н≈еллЭ?┌&╪ллЭ?≈хбллЭ?█Х╬ллЭ?я╥┤аллЭ?┌
+'лллЭ?═щ2бллЭ?MZ░аллЭ?З²юллЭ?╖░юллЭ?└чш╩ллЭ?P2Г╧ллЭ?QМO╞ллЭ?[ПГ╔ллЭ?└╩┐┤ллЭ?b╔CйллЭ?▒,╩ллЭ?Жi~╥ллЭ?ъю/кллЭ?ш≈╥ллЭ?╧УЙ╧ллЭ?БNZ╧ллЭ?й)Ь╦ллЭ?$N}╦ллЭ?{Ь╥ллЭ?hЩ#╥ллЭ?У)Е╢ллЭ?iцЁллЭ?⌡Y·ллЭ?Цf"╣ллЭ?<FT╦ллЭ?·║╤ллЭ?Lсц╤ллЭ?е╟╤ллЭ?╛ г╤ллЭ?⌠╝╥ллЭ?Ю╒<╥ллЭ?╧^кллЭ?╤lЁллЭ?1еS╠ллЭ?╩mЖ▒ллЭ?дA.[ллЭ?Ж^?клЭ?3)ЬюллЭ?КЫюллЭ? |шкллЭ?КналлЭ?.╞uаллЭ?ю1аллЭ?╘©ТюллЭ?p2⌡юллЭ?_юллЭ?ю∙-©ллЭ?²Э╬ллЭ?rbpкллЭ?бШVцллЭ?Mх+аллЭ?f╦╗бллЭ?п8²аллЭ?∙5КаллЭ?ЫНкллЭ?[бллЭ?G┌бллЭ?NeiаллЭ?g-\аллЭ?UиВ©ллЭ?KQ©ллЭ?6AчЁллЭ?f┌8╜ллЭ?)┐я▐ллЭ?
+ЁwйлЭ?B²╓ллЭ?kё╓ллЭ?2-≥иллЭ?╘хw╖ллЭ? бH╕ллЭ?3b╔ллЭ?f▓╓ллЭ?Л&aёллЭ?╪8ё║ллЭ?/Щ┌·ллЭ?3╟ ллЭ?╥╢,хллЭ?#:╕╛ллЭ?х~L╔ллЭ?}^╙ллЭ?uп╕ллЭ?>░з╖ллЭ?╒²шиллЭ?дV╘ллЭ?-в▄╗ллЭ?т╕ллЭ?П╛Я╔ллЭ?(3║ллЭ?иwУ²ллЭ?├╓xллЭ?V"zaллЭ? █ЩклЭ?┘"DЩглЭ?/╡,у╬лЭ?млллллЭ?нлллллЭ?aкr²мйЭ?QзД┐нЗ?┐5юллЭ?d┴x╗│лЭ?мЭ▀аллЭ?▌лл▄│лЭ?(uлллЭ?5)╤┤Э?┐┴└йллЭ?ЫTщtМ~Э?ЗА лллЭ?M╝tМ~Э?▒}▄кллЭ?K└еuМ~Э?-≥Ж╤ллЭ?	оAЛхЭ?Щ░╨╦ллЭ?СэzтхЭ?≤0бллЭ?V┤з ╦хЭ?■$аллЭ?lшЙmохЭ?пЗ╓ллЭ?58dЬхЭ?Е┬3╗ллЭ?2Y╪ЫЮхЭ?млллллЭ?млллллЭ?млллллЭ?млллллЭ?╢╟dЯl9Ц?(D"Л╕╜?A2^ЕЦ?,╝ЬБСc╝?8jКp`,Ц?╟╖qjs╜?7╩└ мЛ?>9╚[ ≈Б? BэUZ╫?Ш-gaМ?┐Cдoу╤Л?=ЯеDY9ю?=ЯеDY9ю?Hy┬Kь>о?═й2о▓ЛТ?]Ф╣Иz5н?LХйъщ?┬д`ы9EЛ?-|┐М┴ёЭ?A├÷?K┘?
