@@ -14,7 +14,7 @@ This project implements a second-order regenerative OTA-C filter that smooths th
 
 ![OTASYSTEM](docs/otaSys.png)
 
-2) OTA C Block: OTA1 / OTA2 / OTA3 are three identical self-biased 5-transistor OTAs (NMOS differential pair + PMOS current-mirror load + NMOS tail current source) forming the classic two-integrator-loop Gm-C. C1 and C2 are on-chip MiM capacitors (metal3, 2fF/µm², split into a parallel array of unit cells to stay within the 30µm max single-cap dimension). OTA_Q: a smaller, low-current variant of the same 5T OTA topology, connected in positive feedback on its own input/output node, producing a negative resistance in parallel with the lossy filter node to boost Q. Inside the OTA C block, there is also a VCM generator: a low-current resistive divider (VDD/2, sky130_fd_pr__res_high_po, 319Ω/sq) providing the ≈0.9V common-mode reference shared by all OTAs.
+2) OTA C Block: OTA1 / OTA2 / OTA3 (ota_5t_sky130 x1, x2, x3) are three identical self-biased 5-transistor OTAs (NMOS differential pair + PMOS current-mirror load + NMOS tail current source) forming the classic two-integrator-loop Gm-C. C1 and C2 are on-chip MiM capacitors (metal3, 2fF/µm², split into a parallel array of unit cells to stay within the 30µm max single-cap dimension). OTA_Q (otaq_5t_sky130 x4): a smaller, low-current variant of the same 5T OTA topology, connected in positive feedback on its own input/output node, producing a negative resistance in parallel with the lossy filter node to boost Q. Inside the OTA C block, there is also a VCM generator: a low-current resistive divider (VDD/2, sky130_fd_pr__res_high_po, 319Ω/sq) providing the ≈0.9V common-mode reference shared by all OTAs.
 
 ![Layout](docs/layout.png)
 
