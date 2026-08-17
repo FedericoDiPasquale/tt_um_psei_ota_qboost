@@ -26,10 +26,10 @@ module tt_um_psei_ota_qboost (
     main u_analog (
         .VDD   (1'b1),          // VPWR: connesso a VDPWR nel layout
         .GND   (1'b0),          // VGND: connesso a VGND nel layout
-        .B0    (b0),
-        .B1    (b1),
-        .B2    (b2),
-        .OUT   (out),
+        .b0    (b0),
+        .b1    (b1),
+        .b2    (b2),
+        .out   (out),
         // ... altre porte
     );
 
@@ -42,15 +42,17 @@ module tt_um_psei_ota_qboost (
 
     // --- Mappatura pin TinyTapeout ---
     // Uscite digitali non usate: tie basso
-    assign uo_out  = 8'b0;
-    assign uio_out = 8'b0;
-    assign uio_oe  = 8'b0;
     assign b0 = ui_in[0];
     assign b1 = ui_in[1];
     assign b2 = ui_in[2];
 
+    assign uo_out  = 8'b0;
+    assign uio_out = 8'b0;
+    assign uio_oe  = 8'b0;
+
     // Pin analogici
     assign ua[5] = out;
     // ua[2..7] non connessi — lasciare floating per progetti analog-only
-    
+
 endmodule
+
