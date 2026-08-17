@@ -23,7 +23,7 @@ module tt_um_psei_ota_qboost (
     wire b0, b1, b2 ,out;
 
     // --- Istanza blocco analogico ---
-    mio_blocco_analogico u_analog (
+    main u_analog (
         .VDD   (1'b1),          // VPWR: connesso a VDPWR nel layout
         .GND   (1'b0),          // VGND: connesso a VGND nel layout
         .B0    (b0),
