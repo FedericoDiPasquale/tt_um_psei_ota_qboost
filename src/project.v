@@ -51,7 +51,7 @@ module tt_um_psei_ota_qboost (
     assign uio_oe  = 8'b0;
 
     // Pin analogici
-    assign ua[5] = out;
+    assign ua[0] = out;
     // ua[2..7] non connessi — lasciare floating per progetti analog-only
 
 endmodule
