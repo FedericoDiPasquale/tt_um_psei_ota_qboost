@@ -1,0 +1,422 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_high_po_1p41 and Circuit 2 cell sky130_fd_pr__res_high_po_1p41 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_high_po_1p41  |Circuit 2: sky130_fd_pr__res_high_po_1p41  
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_high_po_1p41 and sky130_fd_pr__res_high_po_1p41 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__cap_mim_m3_1 and Circuit 2 cell sky130_fd_pr__cap_mim_m3_1 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_1      
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_generic_po and Circuit 2 cell sky130_fd_pr__res_generic_po are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_generic_po    |Circuit 2: sky130_fd_pr__res_generic_po    
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_generic_po and sky130_fd_pr__res_generic_po are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_8LGPJ7 in circuit ota_5t_sky130 (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_NMZPXD in circuit ota_5t_sky130 (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_6CY75A in circuit ota_5t_sky130 (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_EAQ5W9 in circuit ota_5t_sky130 (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: ota_5t_sky130                   |Circuit 2: ota_5t_sky130                   
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (4)                |sky130_fd_pr__nfet_01v8 (4)                
+sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (2)                
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: ota_5t_sky130                   |Circuit 2: ota_5t_sky130                   
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VOUT                                       |VOUT                                       
+GND                                        |GND                                        
+VINP                                       |VINP                                       
+VINN                                       |VINN                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ota_5t_sky130 and ota_5t_sky130 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_WMUBDE in circuit otaq_5t_sky130 (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_5AEUQ7 in circuit otaq_5t_sky130 (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_Y8ARZT in circuit otaq_5t_sky130 (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_49D4KV in circuit otaq_5t_sky130 (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: otaq_5t_sky130                  |Circuit 2: otaq_5t_sky130                  
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (4)                |sky130_fd_pr__nfet_01v8 (4)                
+sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (2)                
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: otaq_5t_sky130                  |Circuit 2: otaq_5t_sky130                  
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VOUT                                       |VOUT                                       
+GND                                        |GND                                        
+VINP                                       |VINP                                       
+VINN                                       |VINN                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes otaq_5t_sky130 and otaq_5t_sky130 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__res_high_po_1p41_2THKUN in circuit otaSys_5t_sky130 (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__cap_mim_m3_1_PPRVRG in circuit otaSys_5t_sky130 (0)(2 instances)
+
+Class otaSys_5t_sky130 (0):  Merged 6 parallel devices.
+Subcircuit summary:
+Circuit 1: otaSys_5t_sky130                |Circuit 2: otaSys_5t_sky130                
+-------------------------------------------|-------------------------------------------
+ota_5t_sky130 (3)                          |ota_5t_sky130 (3)                          
+otaq_5t_sky130 (1)                         |otaq_5t_sky130 (1)                         
+sky130_fd_pr__res_high_po_1p41 (2)         |sky130_fd_pr__res_high_po_1p41 (2)         
+sky130_fd_pr__cap_mim_m3_1 (8->2)          |sky130_fd_pr__cap_mim_m3_1 (8->2)          
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: otaSys_5t_sky130                |Circuit 2: otaSys_5t_sky130                
+-------------------------------------------|-------------------------------------------
+GND                                        |GND                                        
+in                                         |in                                         
+VDD                                        |VDD                                        
+out                                        |out                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes otaSys_5t_sky130 and otaSys_5t_sky130 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__res_generic_po_2VQQNW in circuit DAC3bit (0)(12 instances)
+Flattening unmatched subcell sky130_fd_pr__res_generic_po_9W8GJE in circuit DAC3bit (0)(1 instance)
+
+Class DAC3bit (0):  Merged 4 series devices.
+Class DAC3bit (1):  Merged 4 series devices.
+Subcircuit summary:
+Circuit 1: DAC3bit                         |Circuit 2: DAC3bit                         
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__res_generic_po (13->9)       |sky130_fd_pr__res_generic_po (13->9)       
+Number of devices: 9                       |Number of devices: 9                       
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: DAC3bit                         |Circuit 2: DAC3bit                         
+-------------------------------------------|-------------------------------------------
+b1                                         |b1                                         
+b2                                         |b2                                         
+VDD                                        |VDD                                        
+b0                                         |b0                                         
+out                                        |out                                        
+GND                                        |GND                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes DAC3bit and DAC3bit are equivalent.
+
+Subcircuit summary:
+Circuit 1: main                            |Circuit 2: main                            
+-------------------------------------------|-------------------------------------------
+otaSys_5t_sky130 (1)                       |otaSys_5t_sky130 (1)                       
+DAC3bit (1)                                |DAC3bit (1)                                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: main                            |Circuit 2: main                            
+-------------------------------------------|-------------------------------------------
+b0                                         |b0                                         
+b1                                         |b1                                         
+b2                                         |b2                                         
+out                                        |out                                        
+VDD                                        |VDD                                        
+GND                                        |GND                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes main and main are equivalent.
+
+Cell tt_um_psei_ota_qboost (0) disconnected node: clk
+Cell tt_um_psei_ota_qboost (0) disconnected node: ena
+Cell tt_um_psei_ota_qboost (0) disconnected node: rst_n
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[0]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[1]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[2]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[3]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[4]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[6]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[7]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ui_in[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: VGND
+Cell tt_um_psei_ota_qboost (1) disconnected node: VDPWR
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[0]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[0]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[0]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[0]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ena
+Cell tt_um_psei_ota_qboost (1) disconnected node: clk
+Cell tt_um_psei_ota_qboost (1) disconnected node: rst_n
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Removing zero-valued device r from cell tt_um_psei_ota_qboost (0) makes a better match
+Making another compare attempt.
+
+Cell tt_um_psei_ota_qboost (0) disconnected node: clk
+Cell tt_um_psei_ota_qboost (0) disconnected node: ena
+Cell tt_um_psei_ota_qboost (0) disconnected node: rst_n
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[0]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[1]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[2]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[3]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[4]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[6]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ua[7]
+Cell tt_um_psei_ota_qboost (0) disconnected node: ui_in[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: VGND
+Cell tt_um_psei_ota_qboost (1) disconnected node: VDPWR
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ui_in[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uo_out[0]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_in[0]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_out[0]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: uio_oe[0]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[7]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[6]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[5]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[4]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[3]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[2]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ua[1]
+Cell tt_um_psei_ota_qboost (1) disconnected node: ena
+Cell tt_um_psei_ota_qboost (1) disconnected node: clk
+Cell tt_um_psei_ota_qboost (1) disconnected node: rst_n
+Subcircuit summary:
+Circuit 1: tt_um_psei_ota_qboost           |Circuit 2: tt_um_psei_ota_qboost           
+-------------------------------------------|-------------------------------------------
+main (1)                                   |main (1)                                   
+Number of devices: 1                       |Number of devices: 1                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: tt_um_psei_ota_qboost           |Circuit 2: tt_um_psei_ota_qboost           
+-------------------------------------------|-------------------------------------------
+VDPWR                                      |(no pin, node is 1'b1)                     
+ui_in[0]                                   |ui_in[0]                                   
+ua[5]                                      |ua[0] **Mismatch**                         
+ui_in[1]                                   |ui_in[1]                                   
+ui_in[3]                                   |(no pin, node is 1'b0)                     
+clk                                        |clk                                        
+ena                                        |ena                                        
+rst_n                                      |rst_n                                      
+ua[1]                                      |ua[1]                                      
+ua[2]                                      |ua[2]                                      
+ua[3]                                      |ua[3]                                      
+ua[4]                                      |ua[4]                                      
+ua[6]                                      |ua[6]                                      
+ua[7]                                      |ua[7]                                      
+(no matching pin)                          |VGND                                       
+(no matching pin)                          |VDPWR                                      
+(no matching pin)                          |ui_in[7]                                   
+(no matching pin)                          |ui_in[6]                                   
+(no matching pin)                          |ui_in[5]                                   
+(no matching pin)                          |ui_in[4]                                   
+(no matching pin)                          |ui_in[3]                                   
+(no pin, node is main_0/b2)                |ui_in[2]                                   
+(no matching pin)                          |uo_out[7]                                  
+(no matching pin)                          |uo_out[6]                                  
+(no matching pin)                          |uo_out[5]                                  
+(no matching pin)                          |uo_out[4]                                  
+(no matching pin)                          |uo_out[3]                                  
+(no matching pin)                          |uo_out[2]                                  
+(no matching pin)                          |uo_out[1]                                  
+(no matching pin)                          |uo_out[0]                                  
+(no matching pin)                          |uio_in[7]                                  
+(no matching pin)                          |uio_in[6]                                  
+(no matching pin)                          |uio_in[5]                                  
+(no matching pin)                          |uio_in[4]                                  
+(no matching pin)                          |uio_in[3]                                  
+(no matching pin)                          |uio_in[2]                                  
+(no matching pin)                          |uio_in[1]                                  
+(no matching pin)                          |uio_in[0]                                  
+(no matching pin)                          |uio_out[7]                                 
+(no matching pin)                          |uio_out[6]                                 
+(no matching pin)                          |uio_out[5]                                 
+(no matching pin)                          |uio_out[4]                                 
+(no matching pin)                          |uio_out[3]                                 
+(no matching pin)                          |uio_out[2]                                 
+(no matching pin)                          |uio_out[1]                                 
+(no matching pin)                          |uio_out[0]                                 
+(no matching pin)                          |uio_oe[7]                                  
+(no matching pin)                          |uio_oe[6]                                  
+(no matching pin)                          |uio_oe[5]                                  
+(no matching pin)                          |uio_oe[4]                                  
+(no matching pin)                          |uio_oe[3]                                  
+(no matching pin)                          |uio_oe[2]                                  
+(no matching pin)                          |uio_oe[1]                                  
+(no matching pin)                          |uio_oe[0]                                  
+(no matching pin)                          |ua[5]                                      
+ua[0]                                      |(no matching pin)                          
+ui_in[2]                                   |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for tt_um_psei_ota_qboost and tt_um_psei_ota_qboost altered to match.
+Device classes tt_um_psei_ota_qboost and tt_um_psei_ota_qboost are equivalent.
+
+Final result: Top level cell failed pin matching.
