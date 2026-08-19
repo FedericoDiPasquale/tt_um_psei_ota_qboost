@@ -1,0 +1,60 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1787128131
+<< metal3 >>
+rect -5565 2412 -333 2440
+rect -5565 -2412 -417 2412
+rect -353 -2412 -333 2412
+rect -5565 -2440 -333 -2412
+rect 333 2412 5565 2440
+rect 333 -2412 5481 2412
+rect 5545 -2412 5565 2412
+rect 333 -2440 5565 -2412
+<< via3 >>
+rect -417 -2412 -353 2412
+rect 5481 -2412 5545 2412
+<< mimcap >>
+rect -5525 2360 -725 2400
+rect -5525 -2360 -5485 2360
+rect -765 -2360 -725 2360
+rect -5525 -2400 -725 -2360
+rect 373 2360 5173 2400
+rect 373 -2360 413 2360
+rect 5133 -2360 5173 2360
+rect 373 -2400 5173 -2360
+<< mimcapcontact >>
+rect -5485 -2360 -765 2360
+rect 413 -2360 5133 2360
+<< metal4 >>
+rect -433 2412 -337 2428
+rect -5486 2360 -764 2361
+rect -5486 -2360 -5485 2360
+rect -765 -2360 -764 2360
+rect -5486 -2361 -764 -2360
+rect -433 -2412 -417 2412
+rect -353 -2412 -337 2412
+rect 5465 2412 5561 2428
+rect 412 2360 5134 2361
+rect 412 -2360 413 2360
+rect 5133 -2360 5134 2360
+rect 412 -2361 5134 -2360
+rect -433 -2428 -337 -2412
+rect 5465 -2412 5481 2412
+rect 5545 -2412 5561 2412
+rect 5465 -2428 5561 -2412
+<< labels >>
+rlabel via3 -385 0 -385 0 0 C2_0
+port 1 nsew
+rlabel mimcapcontact -3125 0 -3125 0 0 C1_0
+port 2 nsew
+rlabel via3 5513 0 5513 0 0 C2_1
+port 3 nsew
+rlabel mimcapcontact 2773 0 2773 0 0 C1_1
+port 4 nsew
+<< properties >>
+string FIXED_BBOX 333 -2440 5213 2440
+string gencell sky130_fd_pr__cap_mim_m3_1
+string library sky130
+string parameters w 24 l 24 val 1.17k carea 2.00 cperi 0.19 class capacitor nx 2 ny 1 dummy 0 square 0 lmin 2.00 wmin 2.00 lmax 30.0 wmax 30.0 dc 0 bconnect 1 tconnect 1 ccov 100 stack 1 doports 1
+<< end >>

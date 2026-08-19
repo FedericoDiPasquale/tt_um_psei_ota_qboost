@@ -1,0 +1,162 @@
+* NGSPICE file created from tt_um_psei_ota_qboost.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_8LGPJ7 G D B S
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.5
+**devattr s=23200,916 d=23200,916
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_NMZPXD G D B S
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=1.45 pd=10.58 as=1.45 ps=10.58 w=5 l=0.5
+**devattr s=58000,2116 d=58000,2116
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_6CY75A G D B S
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=1.48
+**devattr s=46400,1716 d=46400,1716
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_EAQ5W9 G D B S
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=0.5
+**devattr s=46400,1716 d=46400,1716
+.ends
+
+.subckt ota_5t_sky130 VDD VOUT VINP VINN GND
+XXM1 VINP XM5/S GND XM4/G sky130_fd_pr__nfet_01v8_8LGPJ7
+XXM2 VINN XM5/S GND VOUT sky130_fd_pr__nfet_01v8_8LGPJ7
+XXM3 XM4/G XM4/G VDD VDD sky130_fd_pr__pfet_01v8_NMZPXD
+XXM4 XM4/G VOUT VDD VDD sky130_fd_pr__pfet_01v8_NMZPXD
+XXM5 VDD GND GND XM5/S sky130_fd_pr__nfet_01v8_6CY75A
+XXM6 VDD GND GND VDD sky130_fd_pr__nfet_01v8_EAQ5W9
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_WMUBDE G D B S
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=7
+**devattr s=5800,316 d=5800,316
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_5AEUQ7 G D B S
+X0 S G D B sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=7
+**devattr s=11600,516 d=11600,516
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_Y8ARZT G D B S
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=20
+**devattr s=5800,316 d=5800,316
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_49D4KV G D B S
+X0 S G D B sky130_fd_pr__nfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.5
+**devattr s=11600,516 d=11600,516
+.ends
+
+.subckt otaq_5t_sky130 VDD VOUT VINP VINN GND
+XXM1 VINP XM5/S GND XM4/G sky130_fd_pr__nfet_01v8_WMUBDE
+XXM2 VINN XM5/S GND VOUT sky130_fd_pr__nfet_01v8_WMUBDE
+XXM3 XM4/G XM4/G VDD VDD sky130_fd_pr__pfet_01v8_5AEUQ7
+XXM4 XM4/G VOUT VDD VDD sky130_fd_pr__pfet_01v8_5AEUQ7
+XXM5 VDD GND GND XM5/S sky130_fd_pr__nfet_01v8_Y8ARZT
+XXM6 VDD GND GND VDD sky130_fd_pr__nfet_01v8_49D4KV
+.ends
+
+.subckt sky130_fd_pr__res_high_po_1p41_2THKUN B R2 R1
+X0 R1 R2 B sky130_fd_pr__res_high_po_1p41 l=88.83
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_1_PPRVRG C1 C2
+X0 C1 C2 sky130_fd_pr__cap_mim_m3_1 l=30 w=30
+X1 C1 C2 sky130_fd_pr__cap_mim_m3_1 l=30 w=30
+X2 C1 C2 sky130_fd_pr__cap_mim_m3_1 l=30 w=30
+X3 C1 C2 sky130_fd_pr__cap_mim_m3_1 l=30 w=30
+.ends
+
+.subckt sky130_fd_pr__cap_mim_m3_1_C954NR C1_1 C1_0 C2_1 C2_0
+X0 C1_0 C2_0 sky130_fd_pr__cap_mim_m3_1 l=24 w=24
+X1 C1_1 C2_1 sky130_fd_pr__cap_mim_m3_1 l=24 w=24
+.ends
+
+.subckt otaSys_5t_sky130 VDD in out GND
+Xx1 VDD XC1/C1 x4/VINN in GND ota_5t_sky130
+Xx3 VDD XC1/C1 x4/VINN out GND ota_5t_sky130
+Xx2 VDD out XC1/C1 x4/VINN GND ota_5t_sky130
+Xx4 VDD out out x4/VINN GND otaq_5t_sky130
+Xsky130_fd_pr__res_high_po_1p41_2THKUN_0 GND x4/VINN VDD sky130_fd_pr__res_high_po_1p41_2THKUN
+Xsky130_fd_pr__res_high_po_1p41_2THKUN_1 GND x4/VINN GND sky130_fd_pr__res_high_po_1p41_2THKUN
+XXC1 XC1/C1 GND sky130_fd_pr__cap_mim_m3_1_PPRVRG
+Xsky130_fd_pr__cap_mim_m3_1_C954NR_0 out out GND GND sky130_fd_pr__cap_mim_m3_1_C954NR
+.ends
+
+.subckt sky130_fd_pr__res_generic_po_2VQQNW R2 R1
+X0 R1 R2 sky130_fd_pr__res_generic_po w=1 l=21
+.ends
+
+.subckt sky130_fd_pr__res_generic_po_9W8GJE R2 R1
+X0 R1 R2 sky130_fd_pr__res_generic_po w=1 l=63
+.ends
+
+.subckt DAC3bit b0 b1 b2 VDD GND out
+XXR1 GND XR2/R1 sky130_fd_pr__res_generic_po_2VQQNW
+XXR10 XR8/R2 XR9/R1 sky130_fd_pr__res_generic_po_2VQQNW
+XXR2 XR9/R2 XR2/R1 sky130_fd_pr__res_generic_po_2VQQNW
+XXR11 XR8/R2 out sky130_fd_pr__res_generic_po_9W8GJE
+XXR3 b0 XR4/R2 sky130_fd_pr__res_generic_po_2VQQNW
+XXR12 out VDD sky130_fd_pr__res_generic_po_2VQQNW
+XXR4 XR4/R2 XR9/R2 sky130_fd_pr__res_generic_po_2VQQNW
+XXR5 XR6/R1 b1 sky130_fd_pr__res_generic_po_2VQQNW
+XXR13 GND out sky130_fd_pr__res_generic_po_2VQQNW
+XXR6 XR9/R1 XR6/R1 sky130_fd_pr__res_generic_po_2VQQNW
+XXR7 XR8/R1 b2 sky130_fd_pr__res_generic_po_2VQQNW
+XXR8 XR8/R2 XR8/R1 sky130_fd_pr__res_generic_po_2VQQNW
+XXR9 XR9/R2 XR9/R1 sky130_fd_pr__res_generic_po_2VQQNW
+.ends
+
+.subckt main VDD b0 b1 b2 out GND
+Xx1 VDD x1/in out GND otaSys_5t_sky130
+Xx5 b0 b1 b2 VDD GND x1/in DAC3bit
+.ends
+
+.subckt tt_um_psei_ota_qboost clk ena rst_n ua[0] ua[1] ua[2] ua[3] ua[4] ua[5] ua[6]
++ ua[7] ui_in[0] ui_in[1] ui_in[2] ui_in[3] ui_in[4] ui_in[5] ui_in[6] ui_in[7] uio_in[0]
++ uio_in[1] uio_in[2] uio_in[3] uio_in[4] uio_in[5] uio_in[6] uio_in[7] uio_oe[0]
++ uio_oe[1] uio_oe[2] uio_oe[3] uio_oe[4] uio_oe[5] uio_oe[6] uio_oe[7] uio_out[0]
++ uio_out[1] uio_out[2] uio_out[3] uio_out[4] uio_out[5] uio_out[6] uio_out[7] uo_out[0]
++ uo_out[1] uo_out[2] uo_out[3] uo_out[4] uo_out[5] uo_out[6] VSUBS VDPWR VGND
+Xmain_0 VDPWR ui_in[0] ui_in[1] main_0/b2 ua[0] VSUBS main
+R0 VSUBS uio_in[4] 0.000000
+R1 VSUBS uio_oe[7] 0.000000
+R2 VSUBS uo_out[2] 0.000000
+R3 VSUBS uio_in[3] 0.000000
+R4 VSUBS uio_oe[6] 0.000000
+R5 VSUBS uo_out[1] 0.000000
+R6 VSUBS uio_in[2] 0.000000
+R7 VSUBS uio_oe[5] 0.000000
+R8 VSUBS uo_out[0] 0.000000
+R9 VSUBS uio_in[1] 0.000000
+R10 VSUBS uio_oe[4] 0.000000
+R11 VSUBS uio_out[7] 0.000000
+R12 VSUBS uio_in[0] 0.000000
+R13 VSUBS uio_oe[3] 0.000000
+R14 VSUBS uio_out[6] 0.000000
+R15 VSUBS ui_in[7] 0.000000
+R16 VSUBS uio_oe[1] 0.000000
+R17 VSUBS uio_oe[2] 0.000000
+R18 VSUBS uio_out[4] 0.000000
+R19 VSUBS uio_out[5] 0.000000
+R20 VSUBS uio_out[3] 0.000000
+R21 VSUBS uo_out[6] 0.000000
+R22 VSUBS uo_out[5] 0.000000
+R23 VSUBS ui_in[6] 0.000000
+R24 VSUBS ui_in[4] 0.000000
+R25 VSUBS ui_in[5] 0.000000
+R26 VSUBS uio_in[7] 0.000000
+R27 VSUBS uio_oe[0] 0.000000
+R28 VSUBS uio_out[2] 0.000000
+R29 VSUBS ui_in[3] 0.000000
+R30 VSUBS uio_in[6] 0.000000
+R31 VSUBS uio_out[1] 0.000000
+R32 VSUBS uo_out[4] 0.000000
+R33 VSUBS VGND 0.000000
+R34 VSUBS uio_in[5] 0.000000
+R35 VSUBS uio_out[0] 0.000000
+R36 VSUBS uo_out[3] 0.000000
+.ends
+
