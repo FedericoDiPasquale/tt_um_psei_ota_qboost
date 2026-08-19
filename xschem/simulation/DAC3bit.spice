@@ -1,0 +1,17 @@
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/DAC3bit.sch
+.subckt DAC3bit b0 b1 b2 VDD out GND
+*.PININFO out:O b0:I b1:I b2:I GND:I VDD:I
+XR1 GND net3 sky130_fd_pr__res_generic_po W=1 L=21
+XR2 net3 net1 sky130_fd_pr__res_generic_po W=1 L=21
+XR3 b0 net4 sky130_fd_pr__res_generic_po W=1 L=21
+XR4 net4 net1 sky130_fd_pr__res_generic_po W=1 L=21
+XR5 b1 net5 sky130_fd_pr__res_generic_po W=1 L=21
+XR6 net5 net2 sky130_fd_pr__res_generic_po W=1 L=21
+XR7 b2 net6 sky130_fd_pr__res_generic_po W=1 L=21
+XR8 net6 vx sky130_fd_pr__res_generic_po W=1 L=21
+XR9 net1 net2 sky130_fd_pr__res_generic_po W=1 L=21
+XR10 net2 vx sky130_fd_pr__res_generic_po W=1 L=21
+XR12 VDD out sky130_fd_pr__res_generic_po W=1 L=21
+XR13 out GND sky130_fd_pr__res_generic_po W=1 L=21
+XR11 out vx sky130_fd_pr__res_generic_po W=1 L=63
+.ends
