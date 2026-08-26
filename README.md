@@ -44,7 +44,7 @@ All parameters are collected in this table:
 
 Lastly, in the next table is summeraized how the OTAs' transistors' size have been designed, including their gm and gds:
 
-| Transistor | Ruolo | ID (µA) | W/L (µm/µm) | gm/ID (V⁻¹) | gm misurato (µS) | gds misurato (µS) |
+| Transistor | Role | ID (µA) | W/L (µm/µm) | gm/ID (V⁻¹) | gm measured (µS) | gds measured (µS) |
 |---|---|---|---|---|---|---|
 | M1 (OTA1) | input (diff. couple) | 20 | 2/0.5 | ~10 | 181.9 (x1) | 1.89 (nfet) |
 | M1 (OTA3) | ingresso (diff. couple) | 20 | 2/0.5 | ~10 | 183.9 (x3) | 1.74 (nfet, x3.xm2) |
@@ -89,7 +89,7 @@ Where OUT is the system's time response from the schematic while on the other ha
 |GainDC| -37.4929 dB, σ = 1.01135 dB | -36.1004 dB, σ = 0.775899 dB|
 |GainF0| -11.6691 dB, σ = 0.764473 dB| -9.97938 dB, σ = 0.590153 dB|
 
-
+6) It was also verified that the presence of the OTA_Q introduces little to none variations at the working frequency (5MHz).
 
 ## How it works
 
