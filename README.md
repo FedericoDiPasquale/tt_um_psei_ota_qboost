@@ -4,7 +4,7 @@
 
 ## Abstract
 
-This project implements a second-order regenerative OTA-C filter that smooths the staircase output of an on-chip 3-bit R-2R DAC into a continuous, sine-like waveform. The filter is built from four self-biased 5-transistor OTAs arranged in a classic two-integrator-loop biquad, with an additional OTA cell wired in positive feedback on itself to act as a negative resistance and boost the loop's quality factor Q. Schematic-level simulation (ngspice, Sky130A tt corner) confirmed correct staircase reconstruction, a resonant peak around 3.5MHz with Q more than 10, and unity (0dB) DC gain. The full layout has been completed in Magic and is LVS-clean, with parasitic extraction (PEX) available for post-layout verification.
+This project implements a second-order regenerative OTA-C filter that smooths the staircase output of an on-chip 3-bit R-2R DAC into a continuous, sine-like waveform. The filter is built from four self-biased 5-transistor OTAs arranged in a classic two-integrator-loop biquad, with an additional OTA cell wired in positive feedback on itself to act as a negative resistance and boost the loop's quality factor Q. Schematic-level simulation (ngspice, Sky130A tt corner) confirmed correct staircase reconstruction of a 5MHz sine wave signal (with 0dB gain), a resonant peak around 3.5MHz with Q more than 15, and unity (0dB) DC gain. The full layout has been completed in Magic and is LVS-clean, with parasitic extraction (PEX) available for post-layout verification.
 
 ## Architecture
 
@@ -29,6 +29,45 @@ This project implements a second-order regenerative OTA-C filter that smooths th
 7) Q-boosting: the classic "regenerative" technique (same principle as Armstrong's regenerative radio receiver) an OTA in positive feedback presents a negative small-signal resistance that partially cancels the parasitic output conductance of the main resonant loop, raising Q without adding a separate high-Q passive component.
 8) Sizing methodology: device W/L and bias currents were derived using the gm/ID method, cross-checked against simulated gm/gds at the actual DC operating point.
 
+All parameters are collected in this table:
+
+| Parameter | Target | Obtained Value (tt corner) |
+|---|---|---|
+| F0 | 3.5 MHz | ≈3.4 MHz |
+| Q | ~20  | ≈19 |
+| GainDC | 1 (0 dB) | 1 (0 dB) |
+| PowerSupply | 1.8 V | 1.8 V |
+| Total Current (static) | ~124 µA (3×40µA OTA mains + ~4µA OTA_Q) | ~125 µA |
+| Available Output Swing | — | ~0.4V–1.6V |
+| Risoluzione DAC | 3 bit (8 levels) | 3 bit (8 levels) |
+| Technology | SkyWater Sky130A 130nm | SkyWater Sky130A 130nm |
+
+Lastly, in the next table is summeraized how the OTAs' transistors' size have been designed, including their gm and gds:
+
+| Transistor | Ruolo | ID (µA) | W/L (µm/µm) | gm/ID (V⁻¹) | gm misurato (µS) | gds misurato (µS) |
+|---|---|---|---|---|---|---|
+| M1 (OTA1) | input (diff. couple) | 20 | 2/0.5 | ~10 | 181.9 (x1) | 1.89 (nfet) |
+| M1 (OTA3) | ingresso (diff. couple) | 20 | 2/0.5 | ~10 | 183.9 (x3) | 1.74 (nfet, x3.xm2) |
+| M2 (OTA2 at output) | output (diff. couple) | 20 | 2/0.5 | ~10 | 186 (x2) | 1.90 (nfet, x2.xm2) |
+| M3/M4 (PMOS mirror, OTA1-3) | active load | 20 | 5/0.5 | — | — | 1.69–1.73 (pfet) |
+| M5 (coda, OTA1-3) | currwnt source | 40 (total) | L=1.475 | — | — | — |
+| M1/M2 (OTA_Q) | Q-boost (diff. couple) | 2×0.15 | W=0.5, L=7 | ~19.4 | 2.99 | — |
+| M2/M4 (OTA_Q at output) | Q-boost load | — | — | — | — | nfet 0.0074, pfet 0.0016 |
+
+The Q factor is related to the Gain parameter with the equation:
+
+\begin{equation}
+    |H(j\omega)| = K \cdot Q
+\end{equation}
+
+With K as GainDC (dB). This formula can be re-written to get the value of Q factor:
+
+\begin{equation}
+    Q = 10^{\fract{(Gain_{max} - Gain_{DC})}{20}}
+\end{equation}
+
+Since the system's purpose is to regenerate a sine wave like signal from a staircase sine wave like one with the constraint of the output dynamic range (0.4V to 1.6V), and more importantly there is no need to amplify the output signal, for all frequency >> 4MHz it has been chosen to not get a Q factor > 25. In fact, around the reasonance peak frequency, the output signal is highly distorted by the dynamic range constraint, so it is raccomanded to not work at this frequency.  
+
 ## Simulation results
 
 1) Transient (staircase reconstruction): driving the R-2R DAC with an 8-level code sequence approximating a sampled sine wave, the schematic-level filter output reconstructs a smooth, continuous waveform with the staircase steps fully removed.
@@ -46,6 +85,13 @@ Where OUT is the system's time response from the schematic while on the other ha
 4) PVT simulations have been successfully shown that the circuit works correctly in all corners conditions ("tt", "ff", "ss", "sf") but the "fs" one (using VDD = 1.8V at 27°C), showing major OUTLAY signal distortion (faster positive swing and slower negative swing of the sine wave), while in the schematic only simulation the OUT signal stays undistorted. For the Voltage Source variations (1.8V ± 10%) in combination with Temperature variations (-40°C, +27°C, +125°C), the 9 possible simulations shows high distortion for the case (1.62V ; -40°C), while the rest of them highlight minor changes on DC value and amplitude of the sine wave.
 
 5) A Monte Carlo analysis was executed: 100 AC simulations have been launched to track down F0, Q and Gain in tt_mm corner conditions. Since it was necessary to check the difference between pre-layout and post-layout performances, the main testbench has been edited this way: at b0 DAC3bit input is wired a ac small signal source (at DC value of around 0.9V) while b1 and b2 have a fixed DC value of 0.9V (half scale). The results are illustrated in the next table:
+
+| Parameter | Pre-Layout | Post-Layout |
+|---|---|---|
+|  F0  | 3.4481 MHz, σ = 100kHz  | 3.3891 MHz, σ = 85kHz |
+|  Q   |   19.5635, σ = 0.670974 | 20.2404, σ = 0.567021 |
+|GainDC| -37.4929 dB, σ = 1.01135 dB | -36.1004 dB, σ = 0.775899 dB|
+|GainF0| -11.6691 dB, σ = 0.764473 dB| -9.97938 dB, σ = 0.590153 dB|
 
 
 
@@ -79,7 +125,7 @@ Main VDD is used (1.8V).
 
 ## How to test
 
-Drive ui[0], ui[1], ui[2] with a 3-bit code sequence that approximates a sine wave when passed through the DAC at a fixed sample rate to trace out one period, repeating to build up multiple cycles.
+Drive ui[0], ui[1], ui[2] with a 3-bit code sequence that approximates a sine wave when passed through the DAC at a fixed sample rate to trace out one period, repeating to build up multiple cycles (F0 to reconstruct must be ≥ 4.5MHz in order to not break the output dynamic constraints).
 
 Probe ua[0] with an oscilloscope.
 You should see a smooth, continuous waveform tracking the average shape of the input staircase, with the sharp steps filtered out. Increasing/decreasing the code update rate relative to the filter's resonant frequency changes how much smoothing you observe.
