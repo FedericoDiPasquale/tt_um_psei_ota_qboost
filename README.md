@@ -95,6 +95,21 @@ Where OUT is the system's time response from the schematic while on the other ha
 
 ![With OTA_Q](docs/Q_boost.png)
 
+7) At last, it was also studied the main characteristics of the R-2R DAC3bit (DNL and INL):
+
+| BIT (decimal) | DNL | INL |
+|---|---|---|
+|  0  | 1.000000e+00 | 0.000000e+00 |
+|  1  | -3.21965e-15 | -4.44089e-15 |
+|  2  | 1.332268e-15 | 0.000000e+00 |
+|  3  | 1.332268e-15 | 0.000000e+00 |
+|  4  | -3.21965e-15 | -4.44089e-15 |
+|  5  | 1.332268e-15 | -4.44089e-15 |
+|  6  | 1.332268e-15 | 0.000000e+00 |
+|  7  | 1.332268e-15 | 0.000000e+00 |
+
+This results shows that the linearity of the DAC is almost perfectly linear.
+
 ## How it works
 
 This project reconstructs a smooth analog waveform from a coarse digital staircase, using a second-order regenerative OTA-C filter.
