@@ -89,7 +89,7 @@ Where OUT is the system's time response from the schematic while on the other ha
 |GainDC| -37.4929 dB, σ = 1.01135 dB | -36.1004 dB, σ = 0.775899 dB|
 |GainF0| -11.6691 dB, σ = 0.764473 dB| -9.97938 dB, σ = 0.590153 dB|
 
-6) It was also verified that the presence of the OTA_Q introduces little to none variations at the working frequency (5MHz): the main focus of the system is to regenerate correctly the analog frequency of the staircaise input signal. On the other hand, its design can be modified in future in order to achieve better Q factor values and therefore better Gain values.
+6) It was also studied separatly and verified that the presence of the OTA_Q introduces little to none variations at the working frequency (5MHz): the main focus of the system is to regenerate correctly the analog frequency of the staircaise input signal. On the other hand, its design can be modified in future in order to achieve better Q factor values and therefore better Gain values.
 
 ![Without OTA_Q](docs/No_Q_Boost.png)
 
