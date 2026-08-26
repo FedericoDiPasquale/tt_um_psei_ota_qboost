@@ -1,0 +1,312 @@
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/main_tb_postlayout.sch
+**.subckt main_tb_postlayout out outlay
+*.opin out
+*.opin outlay
+B0 net4 0 V = '(((time-floor(time/200n)*200n)>=50n && (time-floor(time/200n)*200n)<75n) || ((time-floor(time/200n)*200n)>=125n && (time-floor(time/200n)*200n)<150n) || ((time-floor(time/200n)*200n)>=175n && (time-floor(time/200n)*200n)<200n)) ? 1.8 : 0'
+B2 net5 0 V = '((time-floor(time/200n)*200n)>=25n && (time-floor(time/200n)*200n)<100n) ? 1.8 : 0'
+B3 net6 0 V = '(time-floor(time/200n)*200n)<125n ? 1.8 : 0'
+V1 net1 0 1.8
+x1 net1 b0 net2 b1 b2 0 main
+x2 net1 0 b0 b1 b2 net3 main_parax
+x3 0 out net2 pad_model
+x4 0 outlay net3 pad_model
+V3 b0 0 dc 0.89375 ac 1
+V2 b1 0 0.9
+V4 b2 0 0.9
+**** begin user architecture code
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt_mm
+
+.options savecurrents
+.control
+save all
+.param f=5Meg
+.param Fs=20Meg
+.param Ts={1/Fs}
+let mc_runs = 100
+let mc_runs_post = mc_runs
+  let mc_run = 1
+  let mc_run_post = 1
+  let results_f0   = unitvec(mc_runs)
+  let results_Q    = unitvec(mc_runs)
+  let results_gain = unitvec(mc_runs)
+  let results_gain_max_var = unitvec(mc_runs)
+  let results_f0_post   = unitvec(mc_runs_post)
+  let results_Q_post    = unitvec(mc_runs_post)
+  let results_gain_post = unitvec(mc_runs_post)
+  let results_gain_max_var_post = unitvec(mc_runs_post)
+
+  dowhile mc_run <= mc_runs
+    reset
+    ac dec 200 1 10meg
+
+    * Guadagno DC (al primo punto dello sweep, 1Hz)
+    meas ac gain_dc  FIND vdb(out) AT=1
+    meas ac gain_dc_post  FIND vdb(outlay) AT=1
+    * Guadagno di picco (massimo su tutto lo sweep)
+    let vout_db = vdb(out)
+    let freqvec = frequency
+    let n = length(vout_db)
+    let imax = 0
+    let vmax = vout_db[0]
+    let i = 1
+    dowhile i < n
+      if vout_db[i] > vmax
+        let vmax = vout_db[i]
+        let imax = i
+      end
+      let i = i + 1
+    end
+    let f0_meas = freqvec[imax]
+    let gain_max = vmax
+    echo Gain = $&gain_max dB
+    echo F0 = $&f0_meas Hz
+
+    let vout_db_post = vdb(outlay)
+    let freqvec_post = frequency
+    let n = length(vout_db_post)
+    let imax_post = 0
+    let vmax_post = vout_db_post[0]
+    let l = 1
+    dowhile l < n
+      if vout_db_post[l] > vmax_post
+        let vmax_post = vout_db_post[l]
+        let imax_post = l
+      end
+      let l = l + 1
+    end
+    let f0_meas_post = freqvec_post[imax_post]
+    let gain_max_post = vmax_post
+    echo GainPost = $&gain_max_post dB
+    echo F0Post = $&f0_meas_post Hz
+
+    let gain_dc_run  = gain_dc
+    let gain_dc_run_post  = gain_dc_post
+    let gain_max_run = gain_max
+    let gain_max_run_post = gain_max_post
+    let f0_run       = f0_meas
+    let f0_run_post  = f0_meas_post
+    let GG = (gain_max_run-gain_dc_run)/20
+    let GG_post = (gain_max_run_post-gain_dc_run_post)/20
+    let Q_run        = 10^(GG)
+    let Q_run_post   = 10^(GG_post)
+
+    set gain_save = $&gain_dc_run
+    set gain_max_save = $&gain_max_run
+    set f0_save   = $&f0_run
+    set q_save    = $&Q_run
+    set run_save  = $&mc_run
+    set gain_save_post = $&gain_dc_run_post
+    set gain_max_save_post = $&gain_max_run_post
+    set f0_save_post  = $&f0_run_post
+    set q_save_post   = $&Q_run_post
+    set run_save_post  = $&mc_run_post
+
+    echo Run $&mc_run: f0=$&f0_run Hz  Q=$&Q_run  gainDC=$&gain_dc_run dB  gainMAX=$&gain_max_run dB
+    echo Run $&mc_run_post: f0_post=$&f0_run_post Hz  Q_post=$&Q_run_post  gainDC_post=$&gain_dc_run_post dB gainMAXpost=$&gain_max_run_post dB
+
+    let f0_run   = $f0_save
+    let Q_run    = $q_save
+    let gain_run = $gain_save
+    let gain_max_var = $gain_max_save
+    let mc_run   = $run_save
+    let f0_run_post   = $f0_save_post
+    let Q_run_post    = $q_save_post
+    let gain_run_post = $gain_save_post
+    let gain_max_var_post = $gain_max_save_post
+    let mc_run_post   = $run_save_post
+
+    let results_f0[mc_run - 1]   = f0_run
+    let results_Q[mc_run - 1]    = Q_run
+    let results_gain[mc_run - 1] = gain_run
+    let results_gain_max_var[mc_run - 1] = gain_max_var
+    let results_f0_post[mc_run_post - 1]   = f0_run_post
+    let results_Q_post[mc_run_post - 1]    = Q_run_post
+    let results_gain_post[mc_run_post - 1] = gain_run_post
+    let results_gain_max_var_post[mc_run_post - 1] = gain_max_var_post
+
+    remzerovec
+    write main_postlayout_tb_mc.raw
+    set appendwrite
+    let mc_run = mc_run + 1
+    let mc_run_post = mc_run_post + 1
+  end
+
+  * Statistiche finali per ciascun parametro
+  let mean_f0 = mean(results_f0)
+  let sigma_f0 = sqrt((mean(results_f0*results_f0) - mean_f0*mean_f0) * mc_runs / (mc_runs - 1))
+  let mean_f0_post = mean(results_f0_post)
+  let sigma_f0_post = sqrt((mean(results_f0_post*results_f0_post) - mean_f0_post*mean_f0_post) * mc_runs / (mc_runs - 1))
+
+  let mean_Q = mean(results_Q)
+  let sigma_Q = sqrt((mean(results_Q*results_Q) - mean_Q*mean_Q) * mc_runs / (mc_runs - 1))
+  let mean_Q_post = mean(results_Q_post)
+  let sigma_Q_post = sqrt((mean(results_Q_post*results_Q_post) - mean_Q_post*mean_Q_post) * mc_runs / (mc_runs - 1))
+
+  let mean_gain = mean(results_gain)
+  let sigma_gain = sqrt((mean(results_gain*results_gain) - mean_gain*mean_gain) * mc_runs / (mc_runs - 1))
+  let mean_gain_post = mean(results_gain_post)
+  let sigma_gain_post = sqrt((mean(results_gain_post*results_gain_post) - mean_gain_post*mean_gain_post) * mc_runs / (mc_runs - 1))
+
+  let mean_gain_max = mean(results_gain_max_var)
+  let sigma_gain_max = sqrt((mean(results_gain_max_var*results_gain_max_var) - mean_gain_max*mean_gain_max) * mc_runs / (mc_runs - 1))
+  let mean_gain_max_post = mean(results_gain_max_var_post)
+  let sigma_gain_max_post = sqrt((mean(results_gain_max_var_post*results_gain_max_var_post) - mean_gain_max_post*mean_gain_max_post) * mc_runs_post / (mc_runs_post - 1))
+
+  echo ======================================
+  echo Monte Carlo completato ($&mc_runs run)
+  echo f0:   media=$&mean_f0 Hz   sigma=$&sigma_f0 Hz
+  echo Q:    media=$&mean_Q       sigma=$&sigma_Q
+  echo GainDC: media=$&mean_gain dB sigma=$&sigma_gain dB
+  echo GainMax: media=$&mean_gain_max dB sigma=$&sigma_gain_max dB
+  echo f0_post:   media=$&mean_f0_post Hz   sigma=$&sigma_f0_post Hz
+  echo Q_post:    media=$&mean_Q_post       sigma=$&sigma_Q_post
+  echo GainDC_post: media=$&mean_gain_post dB sigma=$&sigma_gain_post dB
+  echo GainMax_post: media=$&mean_gain_max_post dB sigma=$&sigma_gain_max_post dB
+  echo ======================================
+
+  print results_f0 > tb_mc_f0.txt
+  print results_Q > tb_mc_Q.txt
+  print results_gain > tb_mc_gain.txt
+  print results_f0_post > tb_mc_f0_post.txt
+  print results_Q_post > tb_mc_Q_post.txt
+  print results_gain_post > tb_mc_gain_post.txt
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  main.sym # of pins=6
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/main.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/main.sch
+.subckt main VDD b0 out b1 b2 GND
+*.ipin VDD
+*.ipin GND
+*.ipin b0
+*.ipin b1
+*.ipin b2
+*.opin out
+x5 b0 b1 b2 VDD v_dac GND DAC3bit
+x1 VDD v_dac out GND otaSys_5t_sky130
+.ends
+
+
+* expanding   symbol:  pad_model.sym # of pins=3
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/pad_model.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/pad_model.sch
+.subckt pad_model VGND pin mod
+*.iopin pin
+*.iopin mod
+*.iopin VGND
+XM1 net3 VAPWR mod VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=60 nf=12 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1
+XM2 net3 VGND mod VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=180 nf=18 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1
+C1 pin VGND 2p
+V1 VAPWR VGND 3.3
+R1 net1 pin 1
+L1 net2 net1 1n
+C2 net2 VGND 3p
+R2 net3 net2 50
+C3 mod VGND 250f
+XM3 net3 VGND VGND VGND sky130_fd_pr__nfet_g5v0d10v5 L=0.5 W=60 nf=12 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=15 m=15
+XM4 net3 VAPWR VGND VAPWR sky130_fd_pr__pfet_g5v0d10v5 L=0.5 W=180 nf=18 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=15 m=15
+.ends
+
+
+* expanding   symbol:  main_parax.sym # of pins=6
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/main.sym
+.include /foss/designs/modulo6/tt_um_psei_ota_qboost/mag/main.sim.spice
+
+* expanding   symbol:  DAC3bit.sym # of pins=6
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/DAC3bit.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/DAC3bit.sch
+.subckt DAC3bit b0 b1 b2 VDD out GND
+*.opin out
+*.ipin b0
+*.ipin b1
+*.ipin b2
+*.ipin GND
+*.ipin VDD
+XR1 GND net3 sky130_fd_pr__res_generic_po W=1 L=21
+XR2 net3 net1 sky130_fd_pr__res_generic_po W=1 L=21
+XR3 b0 net4 sky130_fd_pr__res_generic_po W=1 L=21
+XR4 net4 net1 sky130_fd_pr__res_generic_po W=1 L=21
+XR5 b1 net5 sky130_fd_pr__res_generic_po W=1 L=21
+XR6 net5 net2 sky130_fd_pr__res_generic_po W=1 L=21
+XR7 b2 net6 sky130_fd_pr__res_generic_po W=1 L=21
+XR8 net6 vx sky130_fd_pr__res_generic_po W=1 L=21
+XR9 net1 net2 sky130_fd_pr__res_generic_po W=1 L=21
+XR10 net2 vx sky130_fd_pr__res_generic_po W=1 L=21
+XR12 VDD out sky130_fd_pr__res_generic_po W=1 L=21
+XR13 out GND sky130_fd_pr__res_generic_po W=1 L=21
+XR11 out vx sky130_fd_pr__res_generic_po W=1 L=63
+.ends
+
+
+* expanding   symbol:  otaSys_5t_sky130.sym # of pins=4
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaSys_5t_sky130.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaSys_5t_sky130.sch
+.subckt otaSys_5t_sky130 VDD in out GND
+*.opin out
+*.ipin in
+*.ipin GND
+*.ipin VDD
+x1 VDD net1 net2 in GND ota_5t_sky130
+x2 VDD out net1 net2 GND ota_5t_sky130
+x3 VDD net1 net2 out GND ota_5t_sky130
+x4 VDD out out net2 GND otaq_5t_sky130
+XC1 net1 GND sky130_fd_pr__cap_mim_m3_1 W=30 L=30 MF=4 m=4
+XR1 VDD net2 GND sky130_fd_pr__res_high_po_1p41 L=88.83 mult=1
+XR2 net2 GND GND sky130_fd_pr__res_high_po_1p41 L=88.83 mult=1
+XC2 out GND sky130_fd_pr__cap_mim_m3_1 W=24 L=24 MF=1
+XC3 out GND sky130_fd_pr__cap_mim_m3_1 W=24 L=24 MF=1
+.ends
+
+
+* expanding   symbol:  ota_5t_sky130.sym # of pins=5
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/ota_5t_sky130.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/ota_5t_sky130.sch
+.subckt ota_5t_sky130 VDD VOUT VINP VINN GND
+*.ipin VINP
+*.ipin VINN
+*.opin VOUT
+*.ipin VDD
+*.ipin GND
+XM5 V5 VDD GND GND sky130_fd_pr__nfet_01v8 L=1.475 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0
++ mult=1
+XM1 net1 VINP V5 GND sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1 ad=0.58 as=0.58 pd=4.58 ps=4.58 nrd=0.145 nrs=0.145 sa=0 sb=0 sd=0
++ mult=1
+XM2 VOUT VINN V5 GND sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1 ad=0.58 as=0.58 pd=4.58 ps=4.58 nrd=0.145 nrs=0.145 sa=0 sb=0 sd=0
++ mult=1
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0 sd=0
++ mult=1
+XM4 VOUT net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0 sd=0
++ mult=1
+XM6 VDD VDD GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0
++ mult=1
+.ends
+
+
+* expanding   symbol:  otaq_5t_sky130.sym # of pins=5
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaq_5t_sky130.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaq_5t_sky130.sch
+.subckt otaq_5t_sky130 VDD VOUT VINP VINN GND
+*.ipin VINP
+*.ipin VINN
+*.opin VOUT
+*.ipin VDD
+*.ipin GND
+XM5 net2 VDD GND GND sky130_fd_pr__nfet_01v8 L=20 W=0.5 nf=1 ad=0.145 as=0.145 pd=1.58 ps=1.58 nrd=0.58 nrs=0.58 sa=0 sb=0 sd=0
++ mult=1
+XM1 net1 VINP net2 GND sky130_fd_pr__nfet_01v8 L=7 W=0.5 nf=1 ad=0.145 as=0.145 pd=1.58 ps=1.58 nrd=0.58 nrs=0.58 sa=0 sb=0 sd=0
++ mult=1
+XM2 VOUT VINN net2 GND sky130_fd_pr__nfet_01v8 L=7 W=0.5 nf=1 ad=0.145 as=0.145 pd=1.58 ps=1.58 nrd=0.58 nrs=0.58 sa=0 sb=0 sd=0
++ mult=1
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=7 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1
+XM4 VOUT net1 VDD VDD sky130_fd_pr__pfet_01v8 L=7 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1
+XM6 VDD VDD GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 ad=0.29 as=0.29 pd=2.58 ps=2.58 nrd=0.29 nrs=0.29 sa=0 sb=0 sd=0 mult=1
+.ends
+
+.end

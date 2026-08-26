@@ -1,0 +1,55 @@
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/ota_5t_sky130_tb.sch
+**.subckt ota_5t_sky130_tb out
+*.opin out
+V1 Vinp 0 dc 0.9 ac 1 sin(0.9 0.005 5meg 0 0)
+V2 Vinn 0 dc 0.9 sin(0.9 0.005 5meg 0 0 180)
+V4 net1 0 1.8
+x1 net1 out Vinp Vinn 0 ota_5t_sky130
+**** begin user architecture code
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+.control
+save all
+tran 1n 400n
+write ota5t_tran.raw
+op
+print @m.x1.xm2.msky130_fd_pr__nfet_01v8[gds] @m.x1.xm4.msky130_fd_pr__pfet_01v8[gds]
+write ota5t_op.raw
+ac dec 20 1k 100meg
+write ota5t_ac.raw
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  ota_5t_sky130.sym # of pins=5
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/ota_5t_sky130.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/ota_5t_sky130.sch
+.subckt ota_5t_sky130 VDD VOUT VINP VINN GND
+*.ipin VINP
+*.ipin VINN
+*.opin VOUT
+*.ipin VDD
+*.ipin GND
+XM5 V5 VDD net4 GND sky130_fd_pr__nfet_01v8 L=1.475 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0
++ mult=1
+XM1 net1 VINP net2 GND sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1 ad=0.58 as=0.58 pd=4.58 ps=4.58 nrd=0.145 nrs=0.145 sa=0 sb=0 sd=0
++ mult=1
+XM2 VOUT VINN net3 GND sky130_fd_pr__nfet_01v8 L=0.5 W=2 nf=1 ad=0.58 as=0.58 pd=4.58 ps=4.58 nrd=0.145 nrs=0.145 sa=0 sb=0 sd=0
++ mult=1
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0 sd=0
++ mult=1
+XM4 VOUT net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=5 nf=1 ad=1.45 as=1.45 pd=10.58 ps=10.58 nrd=0.058 nrs=0.058 sa=0 sb=0 sd=0
++ mult=1
+XM6 VDD VDD GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=4 nf=1 ad=1.16 as=1.16 pd=8.58 ps=8.58 nrd=0.0725 nrs=0.0725 sa=0 sb=0 sd=0
++ mult=1
+Vmeas net4 GND 0
+.save i(vmeas)
+Vmeas1 net2 V5 0
+.save i(vmeas1)
+Vmeas2 net3 V5 0
+.save i(vmeas2)
+.ends
+
+.end

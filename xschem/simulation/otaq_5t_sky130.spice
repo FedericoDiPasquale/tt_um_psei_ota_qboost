@@ -1,0 +1,16 @@
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/otaq_5t_sky130.sch
+.subckt otaq_5t_sky130 VDD VOUT VINP VINN GND
+*.PININFO VINP:I VINN:I VOUT:O VDD:I GND:I
+XM5 net4 VDD net5 GND sky130_fd_pr__nfet_01v8 L=20 W=0.5 nf=1
+XM1 net1 VINP net2 GND sky130_fd_pr__nfet_01v8 L=7 W=0.5 nf=1
+XM2 VOUT VINN net3 GND sky130_fd_pr__nfet_01v8 L=7 W=0.5 nf=1
+XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=7 W=1 nf=1
+XM4 VOUT net1 VDD VDD sky130_fd_pr__pfet_01v8 L=7 W=1 nf=1
+XM6 VDD VDD GND GND sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1
+Vmeas net5 GND 0
+.save i(vmeas)
+Vmeas1 net2 net4 0
+.save i(vmeas1)
+Vmeas2 net3 net4 0
+.save i(vmeas2)
+.ends
