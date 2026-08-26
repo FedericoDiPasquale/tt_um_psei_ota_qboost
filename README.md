@@ -109,7 +109,7 @@ Where OUT is the system's time response from the schematic while on the other ha
 |  6  | 1.332268e-15 | 0.000000e+00 |
 |  7  | 1.332268e-15 | 0.000000e+00 |
 
-This results shows that the linearity of the DAC is almost perfectly linear.
+These results shows that the linearity of the DAC is almost perfectly linear.
 
 ## How it works
 
