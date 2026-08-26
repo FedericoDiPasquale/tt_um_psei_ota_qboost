@@ -93,7 +93,7 @@ Where OUT is the system's time response from the schematic while on the other ha
 
 ![Without OTA_Q](docs/No_Q_Boost.png)
 
-![With OTA_Q](docs/Q_Boost.png)
+![With OTA_Q](docs/Q_boost.png)
 
 ## How it works
 
