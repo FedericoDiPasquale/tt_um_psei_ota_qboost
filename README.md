@@ -51,7 +51,7 @@ Lastly, in the next table is summeraized how the OTAs' transistors' size have be
 | M1 (OTA3) | input (diff. couple) | 20 | 2/0.5 | ~10 | 183.9 (x3) | 1.74 (nfet, x3.xm2) |
 | M2 (OTA2 at output) | output (diff. couple) | 20 | 2/0.5 | ~10 | 186 (x2) | 1.90 (nfet, x2.xm2) |
 | M3/M4 (PMOS mirror, OTA1-3) | active load | 20 | 5/0.5 | — | — | 1.69–1.73 (pfet) |
-| M5 (coda, OTA1-3) | currwnt source | 40 (total) | L=1.475 | — | — | — |
+| M5 (coda, OTA1-3) | current source | 40 (total) | L=1.475 | — | — | — |
 | M1/M2 (OTA_Q) | Q-boost (diff. couple) | 2×0.15 | W=0.5, L=7 | ~19.4 | 2.99 | — |
 | M2/M4 (OTA_Q at output) | Q-boost load | — | — | — | — | nfet 0.0074, pfet 0.0016 |
 
