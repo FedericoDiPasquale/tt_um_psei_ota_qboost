@@ -1,0 +1,105 @@
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/DAC3bit_tb.sch
+**.subckt DAC3bit_tb out
+*.opin out
+x1 b0 b1 b2 net1 out 0 DAC3bit
+V1 net1 0 1.8
+V2 b0 0 1.8
+V3 b1 0 1.8
+V4 b2 0 1.8
+**** begin user architecture code
+.lib /foss/pdks/sky130A/libs.tech/combined/sky130.lib.spice tt
+
+
+.control
+save all
+
+let n_codes = 8
+let vout_meas = unitvec(n_codes)
+let code = 0
+let bit0 = 0
+let bit1 = 0
+let bit2 = 0
+dowhile bit2 < 2
+  dowhile bit1 < 2
+    dowhile bit0 < 2
+      alter V2 = bit0 * 1.8
+      alter V3 = bit1 * 1.8
+      alter V4 = bit2 * 1.8
+      op
+      let vout_value=v(out)
+      let vout_meas[code]=vout_value
+      echo Codice $&code : b2=$&bit2 b1=$&bit1 b0=$&bit0, Vout=$&vout_value V
+      let bit0 = bit0 + 1
+      let code = code + 1
+    end
+    let bit1 = bit1 + 1
+    let bit0 = 0
+  end
+  let bit2 = bit2 + 1
+  let bit1 = 0
+end
+let v_min = vout_meas[0]
+let v_max = vout_meas[n_codes - 1]
+let lsb_ideal = (v_max - v_min) / (n_codes - 1)
+echo ======================================
+echo LSB ideale = $&lsb_ideal V
+let dnl = unitvec(n_codes)
+let i = 1
+dowhile i < n_codes
+  let step_reale = vout_meas[i] - vout_meas[i-1]
+  let dnl[i] = (step_reale / lsb_ideal) - 1
+  let dnl_curr = dnl[i]
+  echo DNL codice $&i : $&dnl_curr LSB
+  let i = i + 1
+end
+let inl = unitvec(n_codes)
+let l = 0
+dowhile l < n_codes
+  let v_ideal = v_min + l * lsb_ideal
+  let inl[l] = (vout_meas[l] - v_ideal) / lsb_ideal
+  let inl_curr = inl[l]
+  echo INL codice $&l : $&inl_curr LSB
+  let l = l + 1
+end
+echo ======================================
+echo Vout min/max: $&v_min V / $&v_max V
+echo ======================================
+print vout_meas > dac_transfer.txt
+print dnl > dac_dnl.txt
+print inl > dac_inl.txt
+write DAC3bit_op.raw
+ac dec 20 1k 100meg
+write DAC3bit_ac.raw
+tran 1n 5u
+write DAC3bit_tran.raw
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  DAC3bit.sym # of pins=6
+** sym_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/DAC3bit.sym
+** sch_path: /foss/designs/modulo6/tt_um_psei_ota_qboost/xschem/DAC3bit.sch
+.subckt DAC3bit b0 b1 b2 VDD out GND
+*.opin out
+*.ipin b0
+*.ipin b1
+*.ipin b2
+*.ipin GND
+*.ipin VDD
+XR1 GND net3 sky130_fd_pr__res_generic_po W=1 L=21
+XR2 net3 net1 sky130_fd_pr__res_generic_po W=1 L=21
+XR3 b0 net4 sky130_fd_pr__res_generic_po W=1 L=21
+XR4 net4 net1 sky130_fd_pr__res_generic_po W=1 L=21
+XR5 b1 net5 sky130_fd_pr__res_generic_po W=1 L=21
+XR6 net5 net2 sky130_fd_pr__res_generic_po W=1 L=21
+XR7 b2 net6 sky130_fd_pr__res_generic_po W=1 L=21
+XR8 net6 vx sky130_fd_pr__res_generic_po W=1 L=21
+XR9 net1 net2 sky130_fd_pr__res_generic_po W=1 L=21
+XR10 net2 vx sky130_fd_pr__res_generic_po W=1 L=21
+XR12 VDD out sky130_fd_pr__res_generic_po W=1 L=21
+XR13 out GND sky130_fd_pr__res_generic_po W=1 L=21
+XR11 out vx sky130_fd_pr__res_generic_po W=1 L=63
+.ends
+
+.end
