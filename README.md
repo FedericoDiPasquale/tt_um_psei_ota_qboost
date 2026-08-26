@@ -78,7 +78,7 @@ Where OUT is the system's time response from the schematic while on the other ha
 Where OUT is the system's time response from the schematic while on the other hand OUTLAY is the system's time response from post-layout. Finally, x1.v_dac is the output of the DAC3bit.
 ![Frequency Response (Amplitude and Phase)](docs/ac_mag_phase_response.png)
 
-4) PVT simulations have been successfully shown that the circuit works correctly in all corners conditions ("tt", "ff", "ss", "sf") but the "fs" one (using VDD = 1.8V at 27°C), showing major OUTLAY signal distortion (faster positive swing and slower negative swing of the sine wave), while in the schematic only simulation the OUT signal stays undistorted. For the Voltage Source variations (1.8V ± 10%) in combination with Temperature variations (-40°C, +27°C, +125°C), the 9 possible simulations shows high distortion for the case (1.62V ; -40°C), while the rest of them highlight minor changes on DC value and amplitude of the sine wave.
+4) PVT simulations have been successfully shown that the circuit works correctly in all corners conditions ("tt", "ff", "ss", "sf") but the "fs" one (using VDD = 1.8V at 27°C), showing major OUTLAY signal distortion (faster positive swing and slower negative swing of the sine wave). For the Voltage Source variations (1.8V ± 10%) in combination with Temperature variations (-40°C, +27°C, +125°C), the 9 possible simulations shows high distortion for the case (1.62V ; -40°C) in post-layout simulation in particular, while the rest of them highlight minor changes on DC value and amplitude of the sine wave.
 
 5) A Monte Carlo analysis was executed: 100 AC simulations have been launched to track down F0, Q and Gain in tt_mm corner conditions. Since it was necessary to check the difference between pre-layout and post-layout performances, the main testbench has been edited this way: at b0 DAC3bit input is wired a ac small signal source (at DC value of around 0.9V) while b1 and b2 have a fixed DC value of 0.9V (half scale). The results are illustrated in the next table:
 
@@ -89,7 +89,7 @@ Where OUT is the system's time response from the schematic while on the other ha
 |GainDC| -37.4929 dB, σ = 1.01135 dB | -36.1004 dB, σ = 0.775899 dB|
 |GainF0| -11.6691 dB, σ = 0.764473 dB| -9.97938 dB, σ = 0.590153 dB|
 
-6) It was also studied separatly and verified that the presence of the OTA_Q introduces little to none variations at the working frequency (5MHz): the main focus of the system is to regenerate correctly the analog frequency of the staircaise input signal. On the other hand, its design can be modified in future in order to achieve better Q factor values and therefore better Gain values.
+6) It was also studied separatly and verified that the presence of the OTA_Q introduces little to none variations at the working frequency (5MHz): the main focus of the system is to regenerate correctly the analog frequency of the staircaise input signal, possibly without amplification. On the other hand, its design can be modified for future developments in order to achieve better Q factor values and therefore better Gain values.
 
 ![Without OTA_Q](docs/No_Q_Boost.png)
 
