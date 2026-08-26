@@ -34,6 +34,7 @@ All parameters are collected in this table:
 | Parameter | Target | Obtained Value (tt corner) |
 |---|---|---|
 | F0 | 3.5 MHz | ≈3.4 MHz |
+| F_work  | 5 MHz | ≈5 MHz |
 | Q | ~20  | ≈19 |
 | GainDC | 1 (0 dB) | 1 (0 dB) |
 | PowerSupply | 1.8 V | 1.8 V |
