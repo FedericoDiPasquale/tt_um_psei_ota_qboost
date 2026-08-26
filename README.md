@@ -56,15 +56,11 @@ Lastly, in the next table is summeraized how the OTAs' transistors' size have be
 
 The Q factor is related to the Gain parameter with the equation:
 
-\begin{equation}
-    |H(j\omega)| = K \cdot Q
-\end{equation}
+$|H(j\omega)| = K \cdot Q$
 
 With K as GainDC (dB). This formula can be re-written to get the value of Q factor:
 
-\begin{equation}
-    Q = 10^{\fract{(Gain_{max} - Gain_{DC})}{20}}
-\end{equation}
+$Q = 10^{\fract{(Gain_{max} - Gain_{DC})}{20}}$
 
 Since the system's purpose is to regenerate a sine wave like signal from a staircase sine wave like one with the constraint of the output dynamic range (0.4V to 1.6V), and more importantly there is no need to amplify the output signal, for all frequency >> 4MHz it has been chosen to not get a Q factor > 25. In fact, around the reasonance peak frequency, the output signal is highly distorted by the dynamic range constraint, so it is raccomanded to not work at this frequency.  
 
