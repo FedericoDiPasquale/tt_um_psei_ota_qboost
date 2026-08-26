@@ -4,7 +4,7 @@
 
 ## Abstract
 
-This project implements a second-order regenerative OTA-C filter that smooths the staircase output of an on-chip 3-bit R-2R DAC into a continuous, sine-like waveform. The filter is built from four self-biased 5-transistor OTAs arranged in a classic two-integrator-loop biquad, with an additional OTA cell wired in positive feedback on itself to act as a negative resistance and boost the loop's quality factor Q. Schematic-level simulation (ngspice, Sky130A tt corner) confirmed correct staircase reconstruction, a resonant peak around 4.5MHz with Q more than 10, and unity (0dB) DC gain. The full layout has been completed in Magic and is LVS-clean, with parasitic extraction (PEX) available for post-layout verification.
+This project implements a second-order regenerative OTA-C filter that smooths the staircase output of an on-chip 3-bit R-2R DAC into a continuous, sine-like waveform. The filter is built from four self-biased 5-transistor OTAs arranged in a classic two-integrator-loop biquad, with an additional OTA cell wired in positive feedback on itself to act as a negative resistance and boost the loop's quality factor Q. Schematic-level simulation (ngspice, Sky130A tt corner) confirmed correct staircase reconstruction, a resonant peak around 3.5MHz with Q more than 10, and unity (0dB) DC gain. The full layout has been completed in Magic and is LVS-clean, with parasitic extraction (PEX) available for post-layout verification.
 
 ## Architecture
 
@@ -42,6 +42,12 @@ Where OUT is the system's time response from the schematic while on the other ha
 ![Transient Damped Time Response](docs/main_trans_damp_response.png)
 Where OUT is the system's time response from the schematic while on the other hand OUTLAY is the system's time response from post-layout. Finally, x1.v_dac is the output of the DAC3bit.
 ![Frequency Response (Amplitude and Phase)](docs/ac_mag_phase_response.png)
+
+4) PVT simulations have been successfully shown that the circuit works correctly in all corners conditions ("tt", "ff", "ss", "sf") but the "fs" one (using VDD = 1.8V at 27°C), showing major OUTLAY signal distortion (faster positive swing and slower negative swing of the sine wave), while in the schematic only simulation the OUT signal stays undistorted. For the Voltage Source variations (1.8V ± 10%) in combination with Temperature variations (-40°C, +27°C, +125°C), the 9 possible simulations shows high distortion for the case (1.62V ; -40°C), while the rest of them highlight minor changes on DC value and amplitude of the sine wave.
+
+5) A Monte Carlo analysis was executed: 100 AC simulations have been launched to track down F0, Q and Gain in tt_mm corner conditions. Since it was necessary to check the difference between pre-layout and post-layout performances, the main testbench has been edited this way: at b0 DAC3bit input is wired a ac small signal source (at DC value of around 0.9V) while b1 and b2 have a fixed DC value of 0.9V (half scale). The results are illustrated in the next table:
+
+
 
 ## How it works
 
